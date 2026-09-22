@@ -1,0 +1,4082 @@
+<!DOCTYPE html>
+<html lang="es" id="htmlRoot">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Creative Art Video | Production Company</title>
+  <meta name="description"
+    content="Capturamos los momentos mas preciosos de tu boda con arte y elegancia. Videografia cinematografica profesional.">
+  <meta name="theme-color" content="#030303">
+  <link rel="icon" type="image/png"
+    href="https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/About/WEBLOGO.png">
+  <link rel="apple-touch-icon"
+    href="https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/About/WEBLOGO.png">
+
+  <link rel="preload"
+    href="https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/About/WEBLOGO.png" as="image">
+  <link rel="preload" href="assets/hero-principal.jpg" as="image">
+  <link rel="preload" as="video" href="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260306_115329_5e00c9c5-4d69-49b7-94c3-9c31c60bb644.mp4" type="video/mp4">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="https://raw.githubusercontent.com">
+  <link rel="dns-prefetch" href="https://player.vimeo.com">
+  <link rel="preconnect" href="https://raw.githubusercontent.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital,wght@0,400;1,400&family=Manrope:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600&display=swap"
+    rel="stylesheet" media="print" onload="this.media='all'">
+
+
+  <style>
+    :root {
+      --background: #030303;
+      --background-light: #0a0a0a;
+      --foreground: #ffffff;
+      --card: rgba(255, 255, 255, 0.06);
+      --card-hover: rgba(255, 255, 255, 0.11);
+      --primary: #cb8dff;
+      --primary-dark: #a855f7;
+      --primary-light: #e0c3ff;
+      --accent: #cb8dff;
+      --accent-gold: #e8d5a3;
+      --muted: rgba(255, 255, 255, 0.62);
+      --border: rgba(255, 255, 255, 0.14);
+      --crystal-blue: #cb8dff;
+      --crystal-blue-light: #e0c3ff;
+      --crystal-blue-dark: #a855f7;
+      --crystal-aqua: #e0c3ff;
+      --overlay: rgba(0, 0, 0, 0.94);
+      --font-heading: 'Instrument Serif', Georgia, serif;
+      --font-body: 'Manrope', ui-sans-serif, sans-serif;
+      --font-mono: 'Space Grotesk', ui-sans-serif, sans-serif;
+      --glass-blur: blur(36px);
+      --glow-color: rgba(203, 141, 255, 0.4);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      background-color: var(--background);
+    }
+
+    body {
+      font-family: var(--font-body);
+      background-color: transparent;
+      color: var(--foreground);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: var(--background);
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: var(--border);
+      border-radius: 3px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--primary);
+    }
+
+
+    .loading-screen {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, var(--background) 0%, var(--background-light) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      transition: opacity 0.5s ease, visibility 0.5s ease;
+    }
+
+    .loading-screen.hidden {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    .loading-logo {
+      width: 320px;
+      max-width: 80vw;
+      animation: logo-glow 2.5s ease-in-out infinite;
+    }
+
+    @keyframes logo-glow {
+
+      0%,
+      100% {
+        filter: drop-shadow(0 0 15px rgba(203, 141, 255, 0.3)) drop-shadow(0 0 30px rgba(203, 141, 255, 0.2));
+        transform: scale(1);
+      }
+
+      50% {
+        filter: drop-shadow(0 0 25px rgba(203, 141, 255, 0.6)) drop-shadow(0 0 50px rgba(203, 141, 255, 0.4)) drop-shadow(0 0 75px rgba(224, 195, 255, 0.3));
+        transform: scale(1.03);
+      }
+    }
+
+    .loading-bar {
+      position: absolute;
+      bottom: 100px;
+      width: 200px;
+      height: 2px;
+      background: var(--border);
+      border-radius: 2px;
+      overflow: hidden;
+    }
+
+    .loading-bar-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--primary), var(--crystal-aqua), var(--crystal-blue-light));
+      width: 0%;
+      animation: loading 1.2s ease-out forwards;
+    }
+
+    @keyframes loading {
+      0% {
+        width: 0%;
+      }
+
+      100% {
+        width: 100%;
+      }
+    }
+
+
+    .lang-switch {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      z-index: 1001;
+      display: flex;
+      gap: 0.25rem;
+      background: rgba(20, 20, 24, 0.8);
+      backdrop-filter: blur(10px);
+      padding: 0.25rem;
+      border-radius: 30px;
+      border: 1px solid var(--border);
+    }
+
+    .lang-btn {
+      padding: 0.5rem 1rem;
+      background: transparent;
+      border: none;
+      color: var(--muted);
+      font-family: var(--font-body);
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      cursor: pointer;
+      border-radius: 25px;
+      transition: all 0.3s ease;
+    }
+
+    .lang-btn.active {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--crystal-aqua) 100%);
+      color: var(--background);
+    }
+
+    .lang-btn:hover:not(.active) {
+      color: var(--foreground);
+    }
+
+
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 200;
+      padding: 0 2rem;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, transparent 100%);
+      backdrop-filter: blur(0px);
+      transition: background 0.4s ease, box-shadow 0.4s ease, backdrop-filter 0.4s ease;
+    }
+
+    .header.scrolled {
+      position: fixed;
+      top: 0;
+      background: rgba(0, 0, 0, 0.97);
+      backdrop-filter: blur(20px);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+      border-bottom: 1px solid rgba(203, 141, 255, 0.1);
+    }
+
+    .header-content {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 58px;
+    }
+
+    .header-logo {
+      height: 38px;
+      flex-shrink: 0;
+      transition: all 0.3s ease;
+      filter: drop-shadow(0 0 8px rgba(203, 141, 255, 0.35));
+    }
+
+    .header-logo:hover {
+      transform: scale(1.05);
+      filter: drop-shadow(0 0 18px rgba(203, 141, 255, 0.55));
+    }
+
+    .header-nav {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 0;
+      list-style: none;
+      flex-wrap: nowrap;
+    }
+
+    .nav-links li a {
+      color: rgba(240, 246, 252, 0.92);
+      text-decoration: none;
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+      transition: color 0.3s ease;
+      position: relative;
+      padding: 0.45rem 0.9rem;
+      display: block;
+      white-space: nowrap;
+    }
+
+    .nav-links li a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0.9rem;
+      right: 0.9rem;
+      height: 1px;
+      background: linear-gradient(90deg, var(--primary), var(--crystal-aqua));
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+    }
+
+    .nav-links li a:hover {
+      color: var(--primary);
+    }
+
+    .nav-links li a:hover::after {
+      transform: scaleX(1);
+    }
+
+    .mobile-menu-btn {
+      display: none;
+      background: rgba(203, 141, 255, 0.1);
+      border: 1px solid rgba(203, 141, 255, 0.3);
+      color: var(--foreground);
+      width: 40px;
+      height: 40px;
+      border-radius: 8px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .mobile-nav {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.97);
+      backdrop-filter: blur(24px);
+      z-index: 999;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    .mobile-nav.active {
+      display: flex;
+      animation: fadeIn 0.25s ease;
+    }
+
+    .mobile-nav a {
+      color: var(--foreground);
+      text-decoration: none;
+      font-family: var(--font-heading);
+      font-size: 2.2rem;
+      font-weight: 300;
+      letter-spacing: 2px;
+      transition: color 0.3s ease;
+    }
+
+    .mobile-nav a:hover {
+      color: var(--primary);
+    }
+
+    .close-mobile-menu {
+      position: absolute;
+      top: 1.5rem;
+      right: 1.5rem;
+      background: none;
+      border: 1px solid rgba(203, 141, 255, 0.25);
+      color: var(--foreground);
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      font-size: 1.5rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: border-color 0.3s, color 0.3s;
+    }
+
+    .close-mobile-menu:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+
+
+    /* ============================================
+       GLOBAL FIXED VIDEO BACKGROUND — same video behind the whole site;
+       only content (photos, text, cards) scrolls on top of it.
+       ============================================ */
+    .site-bg-video {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -2;
+      background: #000;
+    }
+
+    .site-bg-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.62) 0%, rgba(0, 0, 0, 0.4) 35%, rgba(0, 0, 0, 0.55) 70%, rgba(0, 0, 0, 0.88) 100%);
+      pointer-events: none;
+    }
+
+    /* ============================================
+       LIQUID GLASS — soft frosted panels with a thin gradient-mask border
+       ============================================ */
+    .liquid-glass {
+      background: rgba(255, 255, 255, 0.05);
+      background-blend-mode: luminosity;
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: none;
+      box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .liquid-glass::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      padding: 1.4px;
+      background: linear-gradient(180deg,
+          rgba(255, 255, 255, 0.45) 0%, rgba(255, 255, 255, 0.15) 20%,
+          rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0) 60%,
+          rgba(255, 255, 255, 0.15) 80%, rgba(255, 255, 255, 0.45) 100%);
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      pointer-events: none;
+    }
+
+    .liquid-glass-strong {
+      background: rgba(255, 255, 255, 0.06);
+      background-blend-mode: luminosity;
+      backdrop-filter: blur(50px);
+      -webkit-backdrop-filter: blur(50px);
+      border: none;
+      box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25), inset 0 1px 1px rgba(255, 255, 255, 0.15);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .liquid-glass-strong::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      padding: 1.4px;
+      background: linear-gradient(180deg,
+          rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.2) 20%,
+          rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0) 60%,
+          rgba(255, 255, 255, 0.2) 80%, rgba(255, 255, 255, 0.5) 100%);
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      pointer-events: none;
+    }
+
+    /* ============================================
+       HERO — simple content over the shared global video, no per-section video
+       ============================================ */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 7.5rem 1.5rem 4rem;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .hero-brand {
+      position: absolute;
+      top: clamp(84px, 8vw, 116px);
+      left: clamp(20px, 3vw, 48px);
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      opacity: 0;
+      transform: translateY(16px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .hero-brand.in-view {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .hero-brand img {
+      height: 28px;
+      width: auto;
+    }
+
+    .hero-brand span {
+      font-family: var(--font-heading);
+      font-size: clamp(17px, 2vw, 22px);
+      color: var(--foreground);
+      letter-spacing: -0.01em;
+    }
+
+    .hero-card {
+      max-width: 620px;
+      border-radius: 28px;
+      padding: clamp(1.75rem, 3.4vw, 3rem);
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.9s ease, transform 0.9s ease;
+    }
+
+    .hero-card.in-view {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .hero-subtitle {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--primary-light);
+      margin-bottom: 1rem;
+    }
+
+    .hero-title {
+      font-family: var(--font-heading);
+      font-style: italic;
+      font-size: clamp(2.1rem, 4.6vw, 3.6rem);
+      font-weight: 400;
+      line-height: 1.08;
+      margin-bottom: 1.1rem;
+      color: var(--foreground);
+    }
+
+    .hero-description {
+      font-size: 0.92rem;
+      color: rgba(255, 255, 255, 0.78);
+      max-width: 480px;
+      margin: 0 auto 1.75rem;
+      line-height: 1.8;
+    }
+
+    .hero-btn {
+      display: inline-block;
+      padding: 1rem 3rem;
+      border-radius: 50px;
+      color: var(--foreground);
+      text-decoration: none;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .hero-btn:hover {
+      transform: translateY(-3px);
+    }
+
+    /* Service feature cards, shown below the hero card */
+    .hero-features {
+      width: 100%;
+      max-width: 1080px;
+      margin: 3rem auto 0;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.1rem;
+    }
+
+    .hero-feature-card {
+      position: relative;
+      height: 340px;
+      border-radius: 20px;
+      overflow: hidden;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 1.5rem;
+      text-align: left;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .hero-feature-card.in-view {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .hero-feature-card::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.3) 55%, rgba(0, 0, 0, 0.05) 100%);
+    }
+
+    .hero-feature-card h3,
+    .hero-feature-card p {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-feature-card h3 {
+      font-family: var(--font-heading);
+      font-size: 1.6rem;
+      font-weight: 400;
+      color: var(--foreground);
+      margin-bottom: 0.4rem;
+    }
+
+    .hero-feature-card p {
+      font-size: 0.82rem;
+      color: rgba(255, 255, 255, 0.75);
+      line-height: 1.5;
+    }
+
+    @media (max-width: 900px) {
+      .hero-features {
+        grid-template-columns: 1fr;
+        gap: 0.85rem;
+      }
+
+      .hero-feature-card {
+        height: 220px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        padding-top: 6.5rem;
+      }
+
+      .hero-brand {
+        top: 68px;
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+
+
+    .section {
+      padding: 6rem 2rem;
+      max-width: 1400px;
+      margin: 0 auto;
+      content-visibility: auto;
+      contain-intrinsic-size: 0 600px;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    .section-subtitle {
+      font-size: 0.8rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--crystal-aqua);
+      margin-bottom: 1rem;
+    }
+
+    .section-title {
+      font-family: var(--font-heading);
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 300;
+      margin-bottom: 1rem;
+      background: linear-gradient(135deg, var(--foreground) 0%, var(--crystal-blue) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .section-line {
+      width: 60px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--primary), var(--crystal-aqua));
+      margin: 0 auto;
+      border-radius: 1px;
+    }
+
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .about-image-single {
+      position: relative;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
+      cursor: pointer;
+      transition: transform 0.5s ease;
+      aspect-ratio: 4/5;
+    }
+
+    .about-image-single:hover {
+      transform: scale(1.02);
+    }
+
+    .about-image-single img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+      display: block;
+    }
+
+    .about-image-single:hover img {
+      transform: scale(1.05);
+    }
+
+    .about-content h3 {
+      font-family: var(--font-heading);
+      font-size: 2.5rem;
+      font-weight: 400;
+      margin-bottom: 1.5rem;
+      color: var(--crystal-blue);
+    }
+
+    .about-content p {
+      color: var(--muted);
+      margin-bottom: 1.5rem;
+      line-height: 1.8;
+    }
+
+    .about-stats {
+      display: flex;
+      gap: 3rem;
+      margin-top: 2rem;
+    }
+
+    .stat {
+      text-align: center;
+    }
+
+    .stat-number {
+      font-family: var(--font-heading);
+      font-size: 3rem;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--crystal-aqua) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .stat-label {
+      font-size: 0.8rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+
+    .slideshow-section {
+      position: relative;
+      padding: 6rem 0;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.25) 100%);
+      overflow: hidden;
+    }
+
+    .slideshow-section .section-header {
+      padding: 0 2rem;
+    }
+
+    .slideshow-wrapper {
+      position: relative;
+      max-width: 1100px;
+      margin: 3rem auto 0;
+      padding: 0 2rem;
+    }
+
+    .slideshow-track {
+      position: relative;
+      border-radius: 20px 20px 0 0;
+      overflow: hidden;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+      cursor: pointer;
+      height: 500px;
+    }
+
+    .slide-caption-box {
+      background: var(--card);
+      border-radius: 0 0 20px 20px;
+      padding: 1.5rem 2rem;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+      border: 1px solid var(--border);
+      border-top: none;
+      min-height: 90px;
+    }
+
+    .slide-item {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      transition: opacity 0.8s ease;
+    }
+
+    .slide-item.active {
+      opacity: 1;
+    }
+
+    .slide-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+    }
+
+    .slide-overlay {
+      display: none;
+    }
+
+    .slide-caption {
+      display: none;
+    }
+
+    .slide-caption-tag {
+      font-size: 0.72rem;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--crystal-aqua);
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+
+    .slide-caption-text {
+      font-family: var(--font-heading);
+      font-size: clamp(1.1rem, 2.5vw, 1.6rem);
+      font-weight: 300;
+      color: var(--foreground);
+      line-height: 1.4;
+    }
+
+    .slide-zoom-hint {
+      position: absolute;
+      bottom: 2rem;
+      right: 2.5rem;
+      font-size: 0.7rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.4);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .slide-zoom-hint svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    .slide-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 50px;
+      height: 50px;
+      background: rgba(0, 0, 0, 0.7);
+      border: 1px solid var(--border);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 20;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(10px);
+    }
+
+    .slide-arrow:hover {
+      background: var(--primary);
+      border-color: var(--primary);
+    }
+
+    .slide-arrow svg {
+      width: 20px;
+      height: 20px;
+      color: var(--foreground);
+    }
+
+    .slide-arrow:hover svg {
+      color: var(--background);
+    }
+
+    .slide-arrow-prev {
+      left: -25px;
+    }
+
+    .slide-arrow-next {
+      right: -25px;
+    }
+
+    .slide-dots {
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .slide-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--border);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border: none;
+      padding: 0;
+    }
+
+    .slide-dot.active {
+      background: var(--primary);
+      width: 24px;
+      border-radius: 4px;
+    }
+
+
+    .albums-cta-section {
+      text-align: center;
+    }
+
+    .albums-open-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 1.1rem 3rem;
+      background: transparent;
+      border: 1px solid var(--primary);
+      color: var(--primary);
+      font-family: var(--font-body);
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .albums-open-btn:hover {
+      background: var(--primary);
+      color: var(--background);
+      box-shadow: 0 10px 40px rgba(203, 141, 255, 0.3);
+      transform: translateY(-2px);
+    }
+
+    .albums-open-btn svg {
+      width: 18px;
+      height: 18px;
+    }
+
+
+    .albums-page {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: var(--background) url('assets/fondovideos.jpg') center center / cover no-repeat fixed;
+      z-index: 2000;
+      overflow-y: auto;
+    }
+
+    .albums-page::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.80);
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .albums-top-nav,
+    .albums-hero-banner,
+    .albums-page-body,
+    .albums-page-footer-logo {
+      position: relative;
+      z-index: 1;
+    }
+
+    .albums-page.active {
+      display: block;
+      animation: pageSlideIn 0.4s ease;
+    }
+
+    @keyframes pageSlideIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .albums-page-header {
+      position: sticky;
+      top: 0;
+      background: rgba(0, 0, 0, 0.97);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+      padding: 1.25rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      z-index: 10;
+    }
+
+    .albums-page-title {
+      font-family: var(--font-heading);
+      font-size: 1.6rem;
+      color: var(--crystal-blue);
+    }
+
+    .albums-page-close {
+      background: none;
+      border: 1px solid var(--border);
+      color: var(--foreground);
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      font-size: 1.25rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+    }
+
+    .albums-page-close:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+
+    .albums-page-body {
+      padding: 2.5rem 1.5rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+
+    .albums-page-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.25rem;
+    }
+
+    .albums-category-label {
+      grid-column: 1 / -1;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin: 0.5rem 0 0.25rem;
+    }
+
+    .albums-category-label:first-child {
+      margin-top: 0;
+    }
+
+    .albums-category-label span {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      white-space: nowrap;
+      padding: 0.3rem 0.9rem;
+      border-radius: 20px;
+    }
+
+    .albums-category-label span.xv {
+      color: #e8b9f2;
+      background: rgba(232, 185, 242, 0.1);
+      border: 1px solid rgba(232, 185, 242, 0.3);
+    }
+
+    .albums-category-label span.boda {
+      color: var(--crystal-aqua);
+      background: rgba(203, 141, 255, 0.08);
+      border: 1px solid rgba(203, 141, 255, 0.25);
+    }
+
+    .albums-category-label hr {
+      flex: 1;
+      border: none;
+      height: 1px;
+      background: linear-gradient(90deg, rgba(203, 141, 255, 0.2), transparent);
+    }
+
+    .album-thumb {
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      aspect-ratio: 3/2;
+      border: 1px solid rgba(203, 141, 255, 0.15);
+      background: rgba(255, 255, 255, 0.05);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+      will-change: transform;
+    }
+
+    .album-thumb:hover {
+      transform: translateY(-10px) scale(1.02);
+      box-shadow: 0 30px 70px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(203, 141, 255, 0.4), 0 0 40px rgba(203, 141, 255, 0.12);
+    }
+
+    .album-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      transition: transform 0.5s ease;
+      display: block;
+    }
+
+    .album-thumb:hover img {
+      transform: scale(1.08);
+    }
+
+    .album-thumb-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      top: 0;
+      padding: 1.25rem 1.1rem 1rem;
+      background: linear-gradient(to bottom, transparent 30%, rgba(0, 0, 0, 0.55) 60%, rgba(0, 0, 0, 0.97) 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      transition: background 0.35s ease;
+    }
+
+    .album-thumb:hover .album-thumb-overlay {
+      background: linear-gradient(to bottom, transparent 20%, rgba(0, 0, 0, 0.5) 55%, rgba(0, 0, 0, 0.99) 100%);
+    }
+
+    .album-thumb-badge {
+      display: inline-block;
+      font-size: 0.6rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 0.2rem 0.55rem;
+      border-radius: 20px;
+      margin-bottom: 0.4rem;
+    }
+
+    .album-thumb-badge.xv {
+      background: rgba(232, 185, 242, 0.2);
+      color: #e8b9f2;
+      border: 1px solid rgba(232, 185, 242, 0.35);
+    }
+
+    .album-thumb-badge.boda {
+      background: rgba(203, 141, 255, 0.15);
+      color: var(--crystal-aqua);
+      border: 1px solid rgba(203, 141, 255, 0.3);
+    }
+
+    .album-thumb-badge.guest {
+      background: rgba(232, 213, 163, 0.15);
+      color: var(--accent-gold);
+      border: 1px solid rgba(232, 213, 163, 0.3);
+    }
+
+    .album-thumb-title {
+      font-family: var(--font-heading);
+      font-size: 1.15rem;
+      font-weight: 500;
+      margin-bottom: 0.2rem;
+      color: var(--foreground);
+      letter-spacing: 0.5px;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+    }
+
+    .album-thumb-count {
+      font-size: 0.72rem;
+      color: var(--crystal-blue);
+      letter-spacing: 1px;
+    }
+
+    .albums-page-footer-logo {
+      text-align: center;
+      padding: 2.5rem 1rem 3rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .albums-footer-logo-img {
+      width: clamp(80px, 18vw, 140px);
+      opacity: 0.55;
+      filter: drop-shadow(0 0 12px rgba(203, 141, 255, 0.2));
+      transition: opacity 0.3s ease;
+    }
+
+    .albums-footer-logo-img:hover {
+      opacity: 0.8;
+    }
+
+
+    .album-modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.98);
+      backdrop-filter: blur(24px);
+      z-index: 3000;
+      flex-direction: column;
+    }
+
+    .album-modal.active {
+      display: flex;
+      animation: fadeIn 0.3s ease;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    .album-modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.1rem 2rem;
+      border-bottom: 1px solid rgba(203, 141, 255, 0.12);
+      flex-shrink: 0;
+    }
+
+    .album-modal-title {
+      font-family: var(--font-heading);
+      font-size: 1.7rem;
+      color: var(--crystal-blue);
+    }
+
+    .album-modal-counter {
+      font-size: 0.8rem;
+      color: var(--muted);
+      letter-spacing: 1px;
+    }
+
+    .album-modal-close {
+      background: rgba(203, 141, 255, 0.08);
+      border: 1px solid rgba(203, 141, 255, 0.2);
+      color: var(--foreground);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      font-size: 1.3rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+    }
+
+    .album-modal-close:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+      background: rgba(203, 141, 255, 0.15);
+    }
+
+
+    .album-carousel-area {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+      min-height: 0;
+      padding: 0.5rem 0;
+    }
+
+    .carousel-btn {
+      flex-shrink: 0;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: rgba(0, 0, 0, 0.85);
+      border: 1px solid rgba(203, 141, 255, 0.3);
+      color: var(--foreground);
+      font-size: 1.8rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.25s ease;
+      z-index: 10;
+      margin: 0 0.6rem;
+      backdrop-filter: blur(10px);
+    }
+
+    .carousel-btn:hover {
+      background: rgba(203, 141, 255, 0.2);
+      border-color: var(--primary);
+      color: var(--primary);
+      transform: scale(1.1);
+    }
+
+
+    .carousel-img-wrap {
+      flex: 1;
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.6rem;
+      min-height: 0;
+    }
+
+    .album-carousel-img {
+      width: 100%;
+      max-height: calc(100vh - 280px);
+      object-fit: contain;
+      border-radius: 10px;
+      box-shadow: 0 16px 60px rgba(0, 0, 0, 0.6);
+      user-select: none;
+      transition: opacity 0.5s ease, transform 0.5s ease;
+      display: block;
+    }
+
+    .album-carousel-img.fade-out {
+      opacity: 0;
+      transform: scale(0.98);
+    }
+
+    .carousel-fullscreen-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0.45rem 1.2rem;
+      background: rgba(203, 141, 255, 0.1);
+      border: 1px solid rgba(203, 141, 255, 0.3);
+      color: var(--crystal-blue);
+      border-radius: 25px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      font-family: var(--font-body);
+    }
+
+    .carousel-fullscreen-btn:hover {
+      background: rgba(203, 141, 255, 0.2);
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+
+    .album-thumbnails {
+      display: flex;
+      gap: 6px;
+      padding: 0.75rem 1.5rem;
+      overflow-x: auto;
+      flex-shrink: 0;
+      border-top: 1px solid rgba(203, 141, 255, 0.1);
+      scrollbar-width: thin;
+      scrollbar-color: var(--border) transparent;
+    }
+
+    .album-thumb-mini {
+      width: 64px;
+      height: 44px;
+      object-fit: cover;
+      border-radius: 6px;
+      cursor: pointer;
+      border: 2px solid transparent;
+      opacity: 0.55;
+      transition: all 0.25s ease;
+      flex-shrink: 0;
+    }
+
+    .album-thumb-mini.active {
+      border-color: var(--primary);
+      opacity: 1;
+    }
+
+    .album-thumb-mini:hover {
+      opacity: 0.9;
+    }
+
+    .album-modal-grid {
+      display: none;
+    }
+
+
+    .albums-top-nav {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      padding: 0.85rem 2rem;
+      background: rgba(0, 0, 0, 0.97);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(203, 141, 255, 0.12);
+    }
+
+    .albums-nav-logo {
+      height: 36px;
+      width: auto;
+      flex-shrink: 0;
+    }
+
+    .albums-nav-links {
+      display: flex;
+      flex: 1;
+      justify-content: center;
+      gap: 0.25rem;
+      list-style: none;
+      flex-wrap: wrap;
+    }
+
+    .albums-nav-links a {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-decoration: none;
+      padding: 0.4rem 0.8rem;
+      border-radius: 4px;
+      transition: color 0.25s ease, background 0.25s ease;
+    }
+
+    .albums-nav-links a:hover {
+      color: var(--crystal-blue);
+      background: rgba(203, 141, 255, 0.08);
+    }
+
+
+    .albums-hero-banner {
+      position: relative;
+      text-align: center;
+      padding: 3.5rem 2rem 2.5rem;
+      overflow: hidden;
+    }
+
+    .albums-hero-glow {
+      position: absolute;
+      top: -60px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 500px;
+      height: 200px;
+      background: radial-gradient(ellipse, rgba(203, 141, 255, 0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .albums-hero-sub {
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 4px;
+      color: var(--crystal-blue);
+      margin-bottom: 0.75rem;
+    }
+
+    .albums-hero-title {
+      font-family: var(--font-heading);
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      color: var(--foreground);
+      margin-bottom: 0.75rem;
+    }
+
+    .albums-hero-line {
+      width: 50px;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--primary), transparent);
+      margin: 0 auto 1rem;
+    }
+
+    .albums-hero-desc {
+      font-size: 0.85rem;
+      color: var(--muted);
+      max-width: 400px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+
+    .albums-page-footer {
+      display: none;
+    }
+
+    .albums-page-header {
+      display: none;
+    }
+
+
+    .albums-page-body {
+      padding-top: 0.5rem;
+    }
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 3rem 2rem 4rem;
+    border-top: 1px solid rgba(203, 141, 255, 0.1);
+    margin-top: 2rem;
+    }
+
+    .albums-page-nav .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0;
+      list-style: none;
+    }
+
+    .albums-page-logo {
+      width: clamp(220px, 40vw, 420px);
+      opacity: 0.9;
+      filter: drop-shadow(0 0 30px rgba(203, 141, 255, 0.15));
+      transition: opacity 0.3s ease, filter 0.3s ease;
+    }
+
+    .albums-page-logo:hover {
+      opacity: 1;
+      filter: drop-shadow(0 0 40px rgba(203, 141, 255, 0.3));
+    }
+
+    .albums-header-logo {
+      height: 42px;
+      width: auto;
+      object-fit: contain;
+      filter: drop-shadow(0 0 10px rgba(203, 141, 255, 0.2));
+      flex-shrink: 0;
+    }
+
+    .album-logo-cell {
+      aspect-ratio: 3/2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 16px;
+      border: 1px solid rgba(203, 141, 255, 0.08);
+      background: rgba(0, 0, 0, 0.4);
+      grid-column: span 2;
+    }
+
+    .album-logo-decoration {
+      width: 85%;
+      max-width: 380px;
+      object-fit: contain;
+      filter: drop-shadow(0 0 24px rgba(203, 141, 255, 0.12));
+      opacity: 0.92;
+    }
+
+
+    .zoom-modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.97);
+      z-index: 5000;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    .zoom-modal.active {
+      display: flex;
+      animation: fadeIn 0.3s ease;
+    }
+
+    .zoom-modal img {
+      max-width: 96%;
+      max-height: 92vh;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      border-radius: 8px;
+    }
+
+    .zoom-modal-close {
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+      background: none;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: var(--foreground);
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      font-size: 1.25rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+    }
+
+    .zoom-modal-close:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+
+
+    .videos-open-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 1.1rem 3rem;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--crystal-aqua) 100%);
+      border: none;
+      color: var(--background);
+      font-family: var(--font-body);
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 20px rgba(203, 141, 255, 0.3);
+    }
+
+    .videos-open-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 40px rgba(203, 141, 255, 0.5);
+    }
+
+    .videos-open-btn svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    .videos-page {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: var(--background) url('assets/fondovideos.jpg') center center / cover no-repeat fixed;
+      z-index: 2000;
+      overflow-y: auto;
+    }
+
+    .videos-page::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.82);
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .videos-page-header,
+    .videos-page-body {
+      position: relative;
+      z-index: 1;
+    }
+
+    .videos-page.active {
+      display: block;
+      animation: pageSlideIn 0.4s ease;
+    }
+
+    .videos-page-header {
+      position: sticky;
+      top: 0;
+      background: rgba(0, 0, 0, 0.97);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+      padding: 1.25rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      z-index: 10;
+    }
+
+    .videos-page-title {
+      font-family: var(--font-heading);
+      font-size: 1.6rem;
+      color: var(--crystal-blue);
+    }
+
+    .videos-page-close {
+      background: none;
+      border: 1px solid var(--border);
+      color: var(--foreground);
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      font-size: 1.25rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+    }
+
+    .videos-page-close:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+
+    .videos-page-body {
+      padding: 3rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+
+
+    .video-hero-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 480px;
+      margin-bottom: 3rem;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
+    }
+
+    .video-hero-left {
+      background: rgba(0, 0, 0, 0.92);
+      padding: 2.5rem 2rem 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 1.5rem;
+    }
+
+    .video-hero-tag {
+      font-size: 0.62rem;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      color: var(--accent-gold);
+      margin-bottom: 0.5rem;
+    }
+
+    .video-hero-title {
+      font-family: var(--font-heading);
+      font-size: clamp(1.6rem, 3vw, 2.4rem);
+      color: var(--foreground);
+      line-height: 1.1;
+      margin: 0;
+    }
+
+    .video-hero-title-italic {
+      font-family: var(--font-heading);
+      font-size: clamp(1.6rem, 3vw, 2.4rem);
+      color: var(--accent-gold);
+      font-style: italic;
+      line-height: 1.1;
+      margin: 0 0 0.5rem;
+    }
+
+    .video-hero-divider {
+      width: 40px;
+      height: 1px;
+      background: var(--accent-gold);
+      margin: 0.5rem 0 0.75rem;
+    }
+
+    .video-hero-desc {
+      font-size: 0.82rem;
+      color: var(--muted);
+      line-height: 1.7;
+      max-width: 320px;
+    }
+
+    .video-hero-small {
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      cursor: pointer;
+      aspect-ratio: 16/9;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+      transition: transform 0.3s ease;
+    }
+
+    .video-hero-small:hover {
+      transform: scale(1.02);
+    }
+
+    .video-hero-small img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .video-hero-small .video-play-btn {
+      width: 52px;
+      height: 52px;
+    }
+
+    .video-hero-right {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .video-hero-bg-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 68% center;
+      display: block;
+      transition: transform 0.6s ease;
+    }
+
+    .video-hero-layout:hover .video-hero-bg-img {
+      transform: scale(1.04);
+    }
+
+    .video-hero-right::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right,
+          rgba(0, 0, 0, 0.85) 0%,
+          rgba(0, 0, 0, 0.45) 25%,
+          rgba(0, 0, 0, 0.08) 55%,
+          transparent 100%);
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    @media (max-width: 768px) {
+      .video-hero-layout {
+        grid-template-columns: 1fr;
+        min-height: auto;
+      }
+
+      .video-hero-right {
+        display: none;
+      }
+
+      .video-hero-left {
+        padding: 1.5rem;
+      }
+    }
+
+
+    @media (max-width: 768px) {
+      .album-modal-nav {
+        display: none !important;
+      }
+
+      .album-modal-header {
+        justify-content: space-between;
+        padding: 0.6rem 1rem;
+      }
+
+      .album-carousel-area {
+        padding: 0;
+        gap: 0;
+      }
+
+      .carousel-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1.4rem;
+        margin: 0 0.2rem;
+      }
+
+      .album-carousel-img {
+        max-height: calc(100vh - 180px);
+      }
+
+      .carousel-fullscreen-btn {
+        font-size: 0.65rem;
+        padding: 0.35rem 0.9rem;
+      }
+    }
+
+    .video-hero-bg-img--boda {
+      object-position: 80% center;
+    }
+
+    .video-play-btn {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 80px;
+      height: 80px;
+      background: rgba(203, 141, 255, 0.2);
+      border: 2px solid var(--primary);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(10px);
+    }
+
+    .video-play-btn:hover {
+      background: var(--primary);
+      transform: translate(-50%, -50%) scale(1.1);
+    }
+
+    .video-play-btn svg {
+      width: 36px;
+      height: 36px;
+      color: var(--foreground);
+      margin-left: 4px;
+    }
+
+    .video-play-btn:hover svg {
+      color: var(--background);
+    }
+
+
+    .videos-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+    }
+
+    .video-card {
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+      aspect-ratio: 16/9;
+    }
+
+    .video-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    }
+
+    .video-card img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .video-card-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.1) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .video-card:hover .video-card-overlay {
+      opacity: 1;
+    }
+
+    .video-card-play {
+      width: 52px;
+      height: 52px;
+      background: var(--primary);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 20px rgba(203, 141, 255, 0.5);
+    }
+
+    .video-card-play svg {
+      width: 22px;
+      height: 22px;
+      color: var(--background);
+      margin-left: 3px;
+    }
+
+
+    .video-card-label {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 0.6rem 0.85rem;
+      background: linear-gradient(transparent, rgba(0, 0, 0, 0.85));
+      font-size: 0.7rem;
+      letter-spacing: 1px;
+      color: rgba(255, 255, 255, 0.85);
+      font-family: var(--font-body);
+      font-weight: 500;
+      text-align: center;
+    }
+
+
+    .video-modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.96);
+      z-index: 6000;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+    }
+
+    .video-modal.active {
+      display: flex;
+      animation: fadeIn 0.3s ease;
+    }
+
+    .video-modal-inner {
+      position: relative;
+      width: 100%;
+      max-width: 960px;
+    }
+
+    .video-modal-close {
+      position: absolute;
+      top: -2.5rem;
+      right: 0;
+      background: none;
+      border: none;
+      color: var(--foreground);
+      font-size: 2rem;
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+
+    .video-modal-close:hover {
+      color: var(--primary);
+    }
+
+
+    .entertainment-section {
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.25) 100%);
+    }
+
+    .entertainment-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+    }
+
+    .entertainment-item {
+      aspect-ratio: 1;
+      border-radius: 12px;
+      overflow: hidden;
+      cursor: pointer;
+      position: relative;
+      transition: transform 0.5s ease;
+    }
+
+    .entertainment-item:hover {
+      transform: scale(1.05);
+    }
+
+    .entertainment-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .entertainment-item:hover img {
+      transform: scale(1.1);
+    }
+
+    .entertainment-logo {
+      grid-column: span 2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, var(--card) 0%, var(--background-light) 100%);
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+
+    .entertainment-logo img {
+      width: 60%;
+      object-fit: contain;
+      filter: drop-shadow(0 0 20px rgba(203, 141, 255, 0.4));
+      animation: logo-glow 3s ease-in-out infinite;
+    }
+
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+    }
+
+    .contact-info h3 {
+      font-family: var(--font-heading);
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+      color: var(--crystal-blue);
+    }
+
+    .contact-info p {
+      color: var(--muted);
+      margin-bottom: 2rem;
+      line-height: 1.8;
+    }
+
+    .contact-details {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .contact-icon {
+      width: 50px;
+      height: 50px;
+      background: linear-gradient(135deg, var(--card) 0%, var(--background-light) 100%);
+      border: 1px solid var(--border);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--primary);
+    }
+
+    .contact-icon svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    .contact-text {
+      color: var(--foreground);
+    }
+
+    .contact-text a {
+      color: var(--foreground);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .contact-text a:hover {
+      color: var(--primary);
+    }
+
+    .contact-label {
+      font-size: 0.75rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .contact-form {
+      background: linear-gradient(135deg, var(--card) 0%, var(--background-light) 100%);
+      padding: 3rem;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .form-label {
+      display: block;
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .form-input {
+      width: 100%;
+      padding: 1rem;
+      background: var(--background);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      color: var(--foreground);
+      font-family: var(--font-body);
+      font-size: 1rem;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .form-input:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 15px rgba(203, 141, 255, 0.2);
+    }
+
+    .form-input::placeholder {
+      color: var(--muted);
+    }
+
+    textarea.form-input {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .form-btn {
+      width: 100%;
+      padding: 1rem 2rem;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--crystal-aqua) 100%);
+      border: none;
+      border-radius: 50px;
+      color: var(--background);
+      font-family: var(--font-body);
+      font-size: 0.9rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 20px rgba(203, 141, 255, 0.3);
+    }
+
+    .form-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(203, 141, 255, 0.5);
+    }
+
+    .form-btn:disabled {
+      opacity: 0.7;
+      cursor: not-allowed;
+    }
+
+    .form-success {
+      display: none;
+      text-align: center;
+      padding: 2rem;
+      color: var(--crystal-aqua);
+    }
+
+    .form-success.show {
+      display: block;
+      animation: fadeIn 0.5s ease;
+    }
+
+
+    .footer {
+      padding: 4rem 2rem;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.75) 100%);
+      text-align: center;
+    }
+
+    .footer-logo {
+      width: 150px;
+      margin-bottom: 2rem;
+      filter: drop-shadow(0 0 15px rgba(203, 141, 255, 0.3));
+      animation: logo-glow 3s ease-in-out infinite;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.3s ease;
+    }
+
+    .footer-links a:hover {
+      color: var(--primary);
+    }
+
+    .footer-social {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .footer-social a {
+      width: 45px;
+      height: 45px;
+      background: var(--background);
+      border: 1px solid var(--border);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--foreground);
+      transition: all 0.3s ease;
+    }
+
+    .footer-social a:hover {
+      background: var(--primary);
+      color: var(--background);
+      border-color: var(--primary);
+      transform: translateY(-3px);
+    }
+
+    .footer-social svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    .footer-address {
+      color: var(--muted);
+      font-size: 0.85rem;
+      margin-bottom: 1rem;
+    }
+
+    .footer-copy {
+      color: var(--muted);
+      font-size: 0.8rem;
+    }
+    /* WHATSAPP FLOATING BUTTON */
+    .whatsapp-btn {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      width: 64px;
+      height: 64px;
+      background: var(--primary);
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 10px 34px rgba(203, 141, 255, 0.4), 0 4px 16px rgba(0, 0, 0, 0.4);
+      transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+      text-decoration: none;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    .whatsapp-btn:hover {
+      transform: scale(1.08);
+      background: var(--primary-light);
+      box-shadow: 0 15px 46px rgba(203, 141, 255, 0.55);
+    }
+
+    .whatsapp-btn svg {
+      width: 30px;
+      height: 30px;
+      fill: #050505;
+    }
+
+    @keyframes float {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-8px);
+      }
+    }
+
+
+    .foto-tab-btn {
+      padding: 0.45rem 1.4rem;
+      border-radius: 50px;
+      border: 1px solid var(--crystal-blue);
+      background: transparent;
+      color: var(--crystal-blue);
+      font-family: var(--font-body);
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      cursor: pointer;
+      transition: all 0.25s;
+      text-transform: uppercase;
+    }
+
+    .foto-tab-btn.active,
+    .foto-tab-btn:hover {
+      background: var(--crystal-blue);
+      color: #050505;
+    }
+
+    .fotos-masonry {
+      columns: 3;
+      column-gap: 0.75rem;
+      padding: 0 1.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .foto-item {
+      break-inside: avoid;
+      margin-bottom: 0.75rem;
+      border-radius: 10px;
+      overflow: hidden;
+      cursor: pointer;
+      position: relative;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .foto-item:hover {
+      transform: scale(1.02);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+    }
+
+    .foto-item img {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+    }
+
+    .foto-item.hidden {
+      display: none;
+    }
+
+
+    @media (max-width: 1100px) {
+      .nav-links li a {
+        padding: 0.45rem 0.5rem;
+        font-size: 0.65rem;
+        letter-spacing: 0.8px;
+      }
+
+
+      .albums-page-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .videos-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .slide-arrow-prev {
+        left: 0.5rem;
+      }
+
+      .slide-arrow-next {
+        right: 0.5rem;
+      }
+    }
+
+    @media (max-width: 1024px) {
+      .entertainment-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .entertainment-logo {
+        grid-column: span 2;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .header {
+        position: fixed;
+        top: 0;
+        background: rgba(0, 0, 0, 0.95);
+        backdrop-filter: blur(16px);
+      }
+
+      .header-content {
+        height: auto;
+        flex-direction: column;
+        padding: 0.4rem 0 0.3rem;
+        gap: 0.25rem;
+      }
+
+      .header-logo {
+        height: 28px;
+      }
+
+      .header-nav {
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+      }
+
+      .header-nav::-webkit-scrollbar {
+        display: none;
+      }
+
+      .nav-links {
+        flex-wrap: nowrap;
+        width: max-content;
+        margin: 0 auto;
+        padding: 0 0.5rem;
+      }
+
+      .nav-links li a {
+        font-size: 0.58rem;
+        letter-spacing: 0.7px;
+        padding: 0.35rem 0.5rem;
+        white-space: nowrap;
+      }
+
+      .mobile-menu-btn {
+        display: none !important;
+      }
+
+      .lang-switch {
+        position: fixed;
+        top: 0.35rem;
+        right: 0.75rem;
+        z-index: 1100;
+        transform: scale(0.8);
+        transform-origin: top right;
+      }
+
+      .about-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .entertainment-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+
+      .albums-page-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.85rem;
+      }
+
+      .albums-page-body {
+        padding: 1.5rem 1rem;
+      }
+
+      .videos-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.85rem;
+      }
+
+      .whatsapp-btn {
+        bottom: 1rem;
+        right: 1rem;
+        width: 54px;
+        height: 54px;
+      }
+
+      .whatsapp-btn svg {
+        width: 26px;
+        height: 26px;
+      }
+
+      .slideshow-track {
+        height: 320px;
+      }
+
+      .slide-caption-box {
+        padding: 1rem 1.25rem;
+      }
+
+      .slide-zoom-hint {
+        display: none;
+      }
+
+      .fotos-masonry {
+        columns: 2;
+        padding: 0 0.75rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .section {
+        padding: 4rem 1rem;
+      }
+
+      .hero-title {
+        font-size: 1.75rem;
+      }
+
+      .hero-subtitle {
+        font-size: 0.6rem;
+        letter-spacing: 2px;
+      }
+
+      .hero-content {
+        padding: 1.5rem 1rem;
+      }
+
+
+      .albums-page-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .album-thumb {
+        aspect-ratio: 16/9;
+      }
+
+      .videos-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .entertainment-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .entertainment-logo {
+        grid-column: span 1;
+        aspect-ratio: 16/9;
+      }
+
+      .about-stats {
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+
+      .contact-form {
+        padding: 1.75rem 1rem;
+      }
+
+      .slideshow-track {
+        height: 240px;
+      }
+
+      .slide-caption-text {
+        font-size: 1rem;
+      }
+
+      .fotos-masonry {
+        columns: 1;
+      }
+    }
+
+    /* ============================================
+       BLOOM-INSPIRED SIGNATURE TOUCHES
+       Glassmorphism + italic serif accents + purple glow
+       ============================================ */
+
+    body {
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    .accent-italic {
+      font-style: italic;
+      color: var(--primary-light);
+    }
+
+    /* Nav links: soft glass pill on hover, Bloom-style */
+    .nav-links li a:hover {
+      background: rgba(255, 255, 255, 0.06);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-radius: 30px;
+    }
+
+    .header.scrolled {
+      border-bottom: 1px solid rgba(203, 141, 255, 0.15);
+    }
+
+    .hero-subtitle,
+    .section-subtitle,
+    .albums-hero-sub,
+    .video-hero-tag {
+      font-family: var(--font-mono);
+      font-weight: 500;
+    }
+
+    /* About photo: glass ring instead of flat shadow-only frame */
+    .about-image-single {
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(203, 141, 255, 0.08);
+    }
+
+    /* Slideshow caption: frosted glass card */
+    .slide-caption-box {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: var(--glass-blur);
+      -webkit-backdrop-filter: var(--glass-blur);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-top: none;
+    }
+
+    /* Contact form: frosted glass card, flatter corners like Bloom's feedback card */
+    .contact-form {
+      background: rgba(255, 255, 255, 0.04);
+      backdrop-filter: var(--glass-blur);
+      -webkit-backdrop-filter: var(--glass-blur);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 4px;
+    }
+
+    .form-input {
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: 4px;
+    }
+
+    .form-btn {
+      border-radius: 4px;
+    }
+
+    /* Video / entertainment cards: subtle glass border on hover */
+    .video-card:hover,
+    .entertainment-item:hover {
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(203, 141, 255, 0.25);
+    }
+
+    /* Contact icons: glass circle */
+    .contact-icon {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+    }
+
+    .footer-social a {
+      background: rgba(255, 255, 255, 0.04);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- GLOBAL FIXED BACKGROUND VIDEO — stays the same behind the whole site while you scroll -->
+  <video class="site-bg-video" id="siteBgVideo" autoplay loop muted playsinline preload="auto"
+    poster="assets/hero-principal.jpg">
+    <source src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260306_115329_5e00c9c5-4d69-49b7-94c3-9c31c60bb644.mp4" type="video/mp4">
+  </video>
+  <div class="site-bg-overlay"></div>
+
+  <!-- LOADING SCREEN -->
+  <div class="loading-screen" id="loadingScreen">
+    <img src="https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/About/2logo%20CAV2024.png" alt="Creative Art Video" class="loading-logo" fetchpriority="high">
+    <div class="loading-bar">
+      <div class="loading-bar-fill"></div>
+    </div>
+  </div>
+
+  <!-- LANG SWITCH -->
+  <div class="lang-switch">
+    <button class="lang-btn active" id="langEs" onclick="setLanguage('es')">ES</button>
+    <button class="lang-btn" id="langEn" onclick="setLanguage('en')">EN</button>
+  </div>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="header-content">
+      <a href="#inicio">
+        <img loading="lazy" decoding="async" src="https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/About/WEBLOGO.png" alt="Creative Art Video" class="header-logo">
+      </a>
+      <nav class="header-nav">
+        <ul class="nav-links">
+          <li><a href="#inicio" data-es="Inicio" data-en="Home">Inicio</a></li>
+          <li><a href="#nosotros" data-es="Nosotros" data-en="About">Nosotros</a></li>
+          <li><a href="#galeria" data-es="Galería" data-en="Gallery">Galería</a></li>
+          <li><a href="#videos-section" data-es="Videos" data-en="Videos">Videos</a></li>
+          <li><a href="https://cavent.creativeartvideo.com/ent" target="_blank" data-es="Entretenimiento"
+              data-en="Entertainment">Entretenimiento</a></li>
+          <li><a href="#contacto" data-es="Contacto" data-en="Contact">Contacto</a></li>
+        </ul>
+      </nav>
+      <button class="mobile-menu-btn" id="mobileMenuBtn">&#9776;</button>
+    </div>
+  </header>
+
+  <!-- MOBILE NAV -->
+  <div class="mobile-nav" id="mobileNav">
+    <button class="close-mobile-menu" id="closeMobileMenu">&times;</button>
+    <a href="#inicio" data-es="Inicio" data-en="Home">Inicio</a>
+    <a href="#nosotros" data-es="Nosotros" data-en="About">Nosotros</a>
+    <a href="#galeria" data-es="Galería" data-en="Gallery">Galería</a>
+    <a href="#videos-section" data-es="Videos" data-en="Videos">Videos</a>
+    <a href="https://cavent.creativeartvideo.com/ent" target="_blank" data-es="Entretenimiento"
+      data-en="Entertainment">Entretenimiento</a>
+    <a href="#contacto" data-es="Contacto" data-en="Contact">Contacto</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero" id="inicio">
+    <div class="hero-brand" id="heroBrand">
+      <img loading="lazy" decoding="async" src="https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/About/WEBLOGO.png" alt="Creative Art Video">
+      <span>Creative Art Video</span>
+    </div>
+
+    <div class="hero-card liquid-glass-strong" id="heroCard" style="border-radius:28px;">
+      <p class="hero-subtitle" data-es="Cinematografía de Bodas · XV Años · Cumpleaños · Aniversarios"
+        data-en="Weddings · Quinceañeras · Birthdays · Anniversaries">Cinematografía de Bodas · XV Años · Cumpleaños ·
+        Aniversarios</p>
+      <h1 class="hero-title" data-es="Cada Momento Merece Ser Eterno" data-en="Every Moment Deserves to Last Forever">
+        Cada Momento Merece Ser Eterno</h1>
+      <p class="hero-description"
+        data-es="Convertimos los instantes más íntimos de tu celebración en obras cinematográficas que emocionarán a las generaciones por venir."
+        data-en="We transform the most intimate moments of your celebration into cinematic works that will move generations to come.">
+        Convertimos los instantes más íntimos de tu celebración en obras cinematográficas que emocionarán a las
+        generaciones por venir.</p>
+      <a href="#contacto" class="hero-btn liquid-glass" data-es="Reserva Tu Fecha" data-en="Reserve Your Date">Reserva Tu Fecha</a>
+    </div>
+
+    <div class="hero-features" id="heroFeatures">
+      <div class="hero-feature-card" id="hf1" style="background-image:url('assets/hero-principal.jpg')">
+        <h3 data-es="Bodas" data-en="Weddings">Bodas</h3>
+        <p data-es="Cinematografía que inmortaliza cada detalle del día más importante de tu vida."
+          data-en="Cinematography that immortalizes every detail of the most important day of your life.">Cinematografía
+          que inmortaliza cada detalle del día más importante de tu vida.</p>
+      </div>
+      <div class="hero-feature-card" id="hf2" style="background-image:url('assets/4.jpg')">
+        <h3 data-es="XV Años" data-en="Quinceañeras">XV Años</h3>
+        <p data-es="Capturamos la magia y la elegancia de una noche que solo se vive una vez."
+          data-en="We capture the magic and elegance of a night that only happens once.">Capturamos la magia y la
+          elegancia de una noche que solo se vive una vez.</p>
+      </div>
+      <div class="hero-feature-card" id="hf3" style="background-image:url('assets/9.jpg')">
+        <h3 data-es="Fotografía" data-en="Photography">Fotografía</h3>
+        <p data-es="Imágenes que cuentan tu historia con arte, luz y elegancia atemporal."
+          data-en="Images that tell your story with art, light and timeless elegance.">Imágenes que cuentan tu
+          historia con arte, luz y elegancia atemporal.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOTOGRAFÍA -->
+  <section class="section" id="fotos-galeria" style="padding: 5rem 0;">
+    <div class="section-header">
+      <p class="section-subtitle" data-es="XV Años · Bodas · Eventos" data-en="Quinceañeras · Weddings · Events">XV Años
+        · Bodas · Eventos</p>
+      <h2 class="section-title" data-es="Fotografía" data-en="Photography">Fotografía</h2>
+      <div class="section-line"></div>
+    </div>
+    <div style="display:flex;justify-content:center;flex-wrap:wrap;gap:0.75rem;margin-bottom:2.5rem;">
+      <button class="foto-tab-btn active" onclick="filterFotos('all', this)" data-es="Todo" data-en="All">Todo</button>
+      <button class="foto-tab-btn" onclick="filterFotos('quince', this)" data-es="XV Años" data-en="Quinceañera">XV Años</button>
+      <button class="foto-tab-btn" onclick="filterFotos('boda', this)" data-es="Bodas" data-en="Weddings">Bodas</button>
+    </div>
+    <div class="fotos-masonry" id="fotosMasonry">
+      <div class="foto-item quince"
+        onclick="openZoom('https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/FOTOS%20GALERRY15/LOW%20RESOLIUTION/1.jpg')">
+        <img src="https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/FOTOS%20GALERRY15/LOW%20RESOLIUTION/1.jpg" loading="lazy" alt="XV">
+      </div>
+      <div class="foto-item quince"
+        onclick="openZoom('https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/FOTOS%20GALERRY15/LOW%20RESOLIUTION/02.jpg')">
+        <img src="https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/FOTOS%20GALERRY15/LOW%20RESOLIUTION/02.jpg" loading="lazy" alt="XV">
+      </div>
+      <div class="foto-item quince"
+        onclick="openZoom('https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/FOTOS%20GALERRY15/LOW%20RESOLIUTION/Quince1.jpg')">
+        <img src="https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/FOTOS%20GALERRY15/LOW%20RESOLIUTION/Quince1.jpg" loading="lazy" alt="Quince 1">
+      </div>
+      <div class="foto-item quince"
+        onclick="openZoom('https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/FOTOS%20GALERRY15/LOW%20RESOLIUTION/Quince5.jpg')">
+        <img src="https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/FOTOS%20GALERRY15/LOW%20RESOLIUTION/Quince5.jpg" loading="lazy" alt="Quince 5">
+      </div>
+      <div class="foto-item quince"
+        onclick="openZoom('https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/FOTOS%20GALERRY15/LOW%20RESOLIUTION/Kimberly.jpg')">
+        <img src="https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/FOTOS%20GALERRY15/LOW%20RESOLIUTION/Kimberly.jpg" loading="lazy" alt="Kimberly">
+      </div>
+      <div class="foto-item quince"
+        onclick="openZoom('https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/FOTOS%20GALERRY15/LOW%20RESOLIUTION/kimberely.jpg')">
+        <img src="https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/FOTOS%20GALERRY15/LOW%20RESOLIUTION/kimberely.jpg" loading="lazy" alt="Kimberly 2">
+      </div>
+      <div class="foto-item quince"
+        onclick="openZoom('https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/FOTOS%20GALERRY15/LOW%20RESOLIUTION/CRIS.jpg')">
+        <img src="https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/FOTOS%20GALERRY15/LOW%20RESOLIUTION/CRIS.jpg" loading="lazy" alt="Cris">
+      </div>
+      <div class="foto-item quince"
+        onclick="openZoom('https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/FOTOS%20GALERRY15/LOW%20RESOLIUTION/15Ashley.jpg')">
+        <img src="https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/FOTOS%20GALERRY15/LOW%20RESOLIUTION/15Ashley.jpg" loading="lazy" alt="Ashley">
+      </div>
+      <div class="foto-item quince"
+        onclick="openZoom('https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/FOTOS%20GALERRY15/LOW%20RESOLIUTION/15A.jpg')">
+        <img src="https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/FOTOS%20GALERRY15/LOW%20RESOLIUTION/15A.jpg" loading="lazy" alt="XV">
+      </div>
+      <div class="foto-item quince"
+        onclick="openZoom('https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/FOTOS%20GALERRY15/LOW%20RESOLIUTION/15DOS.jpg')">
+        <img src="https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/FOTOS%20GALERRY15/LOW%20RESOLIUTION/15DOS.jpg" loading="lazy" alt="XV">
+      </div>
+      <div class="foto-item quince"
+        onclick="openZoom('https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/FOTOS%20GALERRY15/LOW%20RESOLIUTION/XochilPRE.jpg')">
+        <img src="https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/FOTOS%20GALERRY15/LOW%20RESOLIUTION/XochilPRE.jpg" loading="lazy" alt="Xochil">
+      </div>
+      <div class="foto-item quince"
+        onclick="openZoom('https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/FOTOS%20GALERRY15/LOW%20RESOLIUTION/CAV%2013-Edit.jpg')">
+        <img src="https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/FOTOS%20GALERRY15/LOW%20RESOLIUTION/CAV%2013-Edit.jpg" loading="lazy" alt="XV CAV">
+      </div>
+      <div class="foto-item quince"
+        onclick="openZoom('https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/FOTOS%20GALERRY15/LOW%20RESOLIUTION/CAV%20261%20copy%202.jpg')">
+        <img src="https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/FOTOS%20GALERRY15/LOW%20RESOLIUTION/CAV%20261%20copy%202.jpg" loading="lazy" alt="XV CAV 261">
+      </div>
+      <div class="foto-item quince"
+        onclick="openZoom('https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/FOTOS%20GALERRY15/LOW%20RESOLIUTION/BAILE%20EN%20LAS%20NUBES.jpg')">
+        <img src="https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/FOTOS%20GALERRY15/LOW%20RESOLIUTION/BAILE%20EN%20LAS%20NUBES.jpg" loading="lazy" alt="Baile en las nubes">
+      </div>
+      <div class="foto-item quince"
+        onclick="openZoom('https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/FOTOS%20GALERRY15/LOW%20RESOLIUTION/humo%20y%20sparks.jpg')">
+        <img src="https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/FOTOS%20GALERRY15/LOW%20RESOLIUTION/humo%20y%20sparks.jpg" loading="lazy" alt="Humo y sparks">
+      </div>
+      <div class="foto-item quince"
+        onclick="openZoom('https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/FOTOS%20GALERRY15/LOW%20RESOLIUTION/Caballo.jpg')">
+        <img src="https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/FOTOS%20GALERRY15/LOW%20RESOLIUTION/Caballo.jpg" loading="lazy" alt="Caballo">
+      </div>
+      <div class="foto-item quince"
+        onclick="openZoom('https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/FOTOS%20GALERRY15/LOW%20RESOLIUTION/cab.jpg')">
+        <img src="https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/FOTOS%20GALERRY15/LOW%20RESOLIUTION/cab.jpg" loading="lazy" alt="Cab">
+      </div>
+      <div class="foto-item quince"
+        onclick="openZoom('https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/FOTOS%20GALERRY15/LOW%20RESOLIUTION/POSCARD1.jpg')">
+        <img src="https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/FOTOS%20GALERRY15/LOW%20RESOLIUTION/POSCARD1.jpg" loading="lazy" alt="Poscard">
+      </div>
+      <div class="foto-item quince"
+        onclick="openZoom('https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/FOTOS%20GALERRY15/LOW%20RESOLIUTION/20x30.jpg')">
+        <img src="https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/FOTOS%20GALERRY15/LOW%20RESOLIUTION/20x30.jpg" loading="lazy" alt="20x30">
+      </div>
+      <div class="foto-item quince"
+        onclick="openZoom('https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/FOTOS%20GALERRY15/LOW%20RESOLIUTION/24x16Acrylyc.jpg')">
+        <img src="https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/FOTOS%20GALERRY15/LOW%20RESOLIUTION/24x16Acrylyc.jpg" loading="lazy" alt="24x16 Acrylic">
+      </div>
+      <div class="foto-item boda"
+        onclick="openZoom('https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/FOTOS%20BODA/SAMPLE%20WEDDING.jpg')">
+        <img src="https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/FOTOS%20BODA/SAMPLE%20WEDDING.jpg" loading="lazy" alt="Sample Wedding">
+      </div>
+      <div class="foto-item boda"
+        onclick="openZoom('https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/FOTOS%20BODA/DSC_0092-20x30%20lowres.jpg')">
+        <img src="https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/FOTOS%20BODA/DSC_0092-20x30%20lowres.jpg" loading="lazy" alt="Boda DSC">
+      </div>
+      <div class="foto-item boda"
+        onclick="openZoom('https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/FOTOS%20BODA/POSCARD2.jpg')">
+        <img src="https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/FOTOS%20BODA/POSCARD2.jpg" loading="lazy" alt="Boda Poscard">
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section" id="nosotros">
+    <div class="section-header">
+      <p class="section-subtitle" data-es="Conoce Nuestro Trabajo" data-en="Know Our Work">Conoce Nuestro Trabajo</p>
+      <h2 class="section-title" data-es="Sobre Nosotros" data-en="About Us">Sobre Nosotros</h2>
+      <div class="section-line"></div>
+    </div>
+    <div style="max-width:700px;margin:0 auto;text-align:center;">
+      <div class="about-content">
+        <h3 data-es="Arte y Pasión en Cada Toma" data-en="Art and Passion in Every Shot">Arte y Pasión en Cada Toma</h3>
+        <p data-es="En Creative Art Video, nos dedicamos a capturar la esencia de cada momento especial. Con años de experiencia en la industria, hemos perfeccionado el arte de contar historias a través del lente."
+          data-en="At Creative Art Video, we dedicate ourselves to capturing the essence of every special moment. With years of experience in the industry, we have perfected the art of storytelling through the lens.">
+          En Creative Art Video, nos dedicamos a capturar la esencia de cada momento especial. Con años de experiencia
+          en la industria, hemos perfeccionado el arte de contar historias a través del lente.</p>
+        <p data-es="Nuestro equipo de profesionales combina técnica, creatividad y pasión para crear videos cinematográficos que emocionan y perduran en el tiempo."
+          data-en="Our team of professionals combines technique, creativity and passion to create cinematic videos that move and endure through time.">
+          Nuestro equipo de profesionales combina técnica, creatividad y pasión para crear videos cinematográficos que
+          emocionan y perduran en el tiempo.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDESHOW -->
+  <section class="slideshow-section" id="galeria">
+    <div class="section-header">
+      <h2 class="section-title" data-es="Momentos que Perduran" data-en="Moments That Last">Momentos que Perduran</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="slideshow-wrapper">
+      <div class="slideshow-track" id="slideshowTrack">
+        <div class="slide-item active"
+          onclick="openZoom('https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/FOTOS%20NOTAS%20LOVE/1500.jpg')">
+          <img loading="lazy" decoding="async" src="https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/FOTOS%20NOTAS%20LOVE/1500.jpg" alt="XV Años" style="object-position: center 20%;">
+          <div class="slide-overlay"></div>
+          <div class="slide-caption">
+            <span class="slide-caption-tag" data-es="XV Años" data-en="Quinceañera">XV Años</span>
+            <p class="slide-caption-text"
+              data-es="Quince años de sueños, de gracia y de una princesa que apenas comienza su historia."
+              data-en="Fifteen years of dreams, grace, and a princess just beginning her story.">Quince años de sueños,
+              de gracia y de una princesa que apenas comienza su historia.</p>
+          </div>
+          <div class="slide-zoom-hint"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+            </svg><span data-es="Ver foto" data-en="View photo">Ver foto</span></div>
+        </div>
+        <div class="slide-item"
+          onclick="openZoom('https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/FOTOS%20NOTAS%20LOVE/1501.jpg')">
+          <img loading="lazy" decoding="async" src="https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/FOTOS%20NOTAS%20LOVE/1501.jpg" alt="XV Años">
+          <div class="slide-overlay"></div>
+          <div class="slide-caption">
+            <span class="slide-caption-tag" data-es="XV Años" data-en="Quinceañera">XV Años</span>
+            <p class="slide-caption-text" data-es="Cada momento, una obra de arte capturada con pasión y elegancia."
+              data-en="Every moment, a work of art captured with passion and elegance.">Cada momento, una obra de arte
+              capturada con pasión y elegancia.</p>
+          </div>
+          <div class="slide-zoom-hint"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+            </svg><span data-es="Ver foto" data-en="View photo">Ver foto</span></div>
+        </div>
+        <div class="slide-item"
+          onclick="openZoom('https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/FOTOS%20NOTAS%20LOVE/1503.jpg')">
+          <img loading="lazy" decoding="async" src="https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/FOTOS%20NOTAS%20LOVE/1503.jpg" alt="XV Años">
+          <div class="slide-overlay"></div>
+          <div class="slide-caption">
+            <span class="slide-caption-tag" data-es="XV Años" data-en="Quinceañera">XV Años</span>
+            <p class="slide-caption-text" data-es="La magia de sus quince, guardada para siempre en cada imagen."
+              data-en="The magic of her quinceañera, forever preserved in every image.">La magia de sus quince, guardada
+              para siempre en cada imagen.</p>
+          </div>
+          <div class="slide-zoom-hint"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+            </svg><span data-es="Ver foto" data-en="View photo">Ver foto</span></div>
+        </div>
+        <div class="slide-item"
+          onclick="openZoom('https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/FOTOS%20NOTAS%20LOVE/BODA.jpg')">
+          <img loading="lazy" decoding="async" src="https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/FOTOS%20NOTAS%20LOVE/BODA.jpg" alt="Boda">
+          <div class="slide-overlay"></div>
+          <div class="slide-caption"><span class="slide-caption-tag" data-es="Bodas" data-en="Weddings">Bodas</span>
+            <p class="slide-caption-text"
+              data-es="El día que prometieron amarse para siempre, nosotros lo guardamos para siempre."
+              data-en="The day they promised to love each other forever — we kept it forever.">El día que prometieron
+              amarse para siempre, nosotros lo guardamos para siempre.</p>
+          </div>
+          <div class="slide-zoom-hint"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+            </svg><span data-es="Ver foto" data-en="View photo">Ver foto</span></div>
+        </div>
+        <button class="slide-arrow slide-arrow-prev" id="slidePrev" onclick="changeSlide(-1)">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+        </button>
+        <button class="slide-arrow slide-arrow-next" id="slideNext" onclick="changeSlide(1)">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+        </button>
+      </div>
+      <div class="slide-dots" id="slideDots"></div>
+      <!-- Caption externo debajo de la foto -->
+      <div class="slide-caption-box" id="slideCaptionBox">
+        <span class="slide-caption-tag" id="slideCaptionTag">XV Años</span>
+        <p class="slide-caption-text" id="slideCaptionText">Quince años de sueños, de gracia y de una princesa que
+          apenas comienza su historia.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ALBUMS SECTION -->
+  <section class="section albums-cta-section" id="albums">
+    <div class="section-header">
+      <p class="section-subtitle" data-es="Colecciones Completas" data-en="Complete Collections">Colecciones Completas
+      </p>
+      <h2 class="section-title" data-es="Álbums" data-en="Albums">Álbums</h2>
+      <div class="section-line"></div>
+    </div>
+    <p style="text-align:center; color: var(--muted); max-width: 500px; margin: 0 auto 2.5rem; line-height: 1.8;"
+      data-es="Cada álbum cuenta una historia completa. Explora nuestras colecciones de bodas, XV años y eventos especiales."
+      data-en="Each album tells a complete story. Explore our collections of weddings, quinceañeras and special events.">
+      Cada álbum cuenta una historia completa. Explora nuestras colecciones de bodas, XV años y eventos especiales.</p>
+    <div style="text-align:center;">
+      <button class="albums-open-btn" onclick="openAlbumsPage()">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+        <span data-es="Ver Álbums" data-en="View Albums">Ver Álbums</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- ALBUMS PAGE -->
+  <div class="albums-page" id="albumsPage">
+    <!-- Nav arriba -->
+    <nav class="albums-top-nav">
+      <img loading="lazy" decoding="async" src="https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/About/WEBLOGO.png" alt="Logo" class="albums-nav-logo">
+      <ul class="albums-nav-links">
+        <li><a href="#inicio" onclick="closeAlbumsPage()" data-es="Inicio" data-en="Home">Inicio</a></li>
+        <li><a href="#nosotros" onclick="closeAlbumsPage()" data-es="Nosotros" data-en="About">Nosotros</a></li>
+        <li><a href="#galeria" onclick="closeAlbumsPage()" data-es="Galería" data-en="Gallery">Galería</a></li>
+        <li><a href="#videos-section" onclick="closeAlbumsPage()" data-es="Videos" data-en="Videos">Videos</a></li>
+        <li><a href="https://cavent.creativeartvideo.com/ent" target="_blank" data-es="Entretenimiento"
+            data-en="Entertainment">Entretenimiento</a></li>
+        <li><a href="#contacto" onclick="closeAlbumsPage()" data-es="Contacto" data-en="Contact">Contacto</a></li>
+      </ul>
+      <button class="albums-page-close" onclick="closeAlbumsPage()">&times;</button>
+    </nav>
+
+    <!-- Hero banner de albums -->
+    <div class="albums-hero-banner">
+      <div class="albums-hero-glow"></div>
+      <p class="albums-hero-sub" data-es="EVENTOS ESPECIALES" data-en="SPECIAL EVENTS">EVENTOS ESPECIALES</p>
+      <h2 class="albums-hero-title" data-es="Nuestros Álbums" data-en="Our Albums">Nuestros Álbums</h2>
+      <div class="albums-hero-line"></div>
+      <p class="albums-hero-desc" data-es="Cada álbum cuenta una historia completa."
+        data-en="Each album tells a complete story.">Cada álbum cuenta una historia completa.</p>
+    </div>
+
+    <div class="albums-page-body">
+      <div class="albums-page-grid">
+        <!-- XV AÑOS -->
+        <div class="albums-category-label"><span class="xv">✦ XV Años</span>
+          <hr>
+        </div>
+        <div class="album-thumb" onclick="openAlbum('alma', 'Álbum XV · Alma')">
+          <img src="https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/AlbumsQuinceanera/Album15%3A1/28x11_album_ALMA_01.jpg" alt="Alma XV" loading="lazy" decoding="async">
+          <div class="album-thumb-overlay">
+            <div class="album-thumb-badge xv">XV Años</div>
+            <h3 class="album-thumb-title">Alma</h3>
+            <p class="album-thumb-count">12 páginas</p>
+          </div>
+        </div>
+        <div class="album-thumb" onclick="openAlbum('paulina', 'Álbum XV · Paulina')">
+          <img src="https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/AlbumsQuinceanera/Album15%3A2/PAULINA_01.jpg" alt="Paulina XV" loading="lazy" decoding="async">
+          <div class="album-thumb-overlay">
+            <div class="album-thumb-badge xv">XV Años</div>
+            <h3 class="album-thumb-title">Paulina</h3>
+            <p class="album-thumb-count">17 páginas</p>
+          </div>
+        </div>
+        <div class="album-thumb" onclick="openAlbum('guestbook', 'Guestbooks · XV Años')">
+          <img src="https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/AlbumsQuinceanera/Guestbootk/Serenity%20Valerie%20guest%20book%20A%20copy.jpg" alt="Guestbook" loading="lazy" decoding="async">
+          <div class="album-thumb-overlay">
+            <div class="album-thumb-badge guest">Guestbook</div>
+            <h3 class="album-thumb-title">Guestbooks</h3>
+            <p class="album-thumb-count">10 fotos</p>
+          </div>
+        </div>
+        <!-- BODAS -->
+        <div class="albums-category-label"><span class="boda">♦ Bodas</span>
+          <hr>
+        </div>
+        <div class="album-thumb" onclick="openAlbum('yvette', 'Álbum Boda · Yvette & Fernando')">
+          <img src="https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/Albums%20Bodas/AlbumWedding/Yvette%20and%20Fernando%20Page%201.jpg" alt="Yvette y Fernando" loading="lazy" decoding="async">
+          <div class="album-thumb-overlay">
+            <div class="album-thumb-badge boda">Boda</div>
+            <h3 class="album-thumb-title">Yvette & Fernando</h3>
+            <p class="album-thumb-count">26 páginas</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Logo centrado al pie -->
+    <div class="albums-page-footer-logo">
+      <img loading="lazy" decoding="async" src="https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/About/2logo%20CAV2024.png" alt="Creative Art Video" class="albums-footer-logo-img">
+    </div>
+
+  </div>
+
+  <!-- ALBUM MODAL — CARRUSEL -->
+  <div class="album-modal" id="albumModal">
+    <div class="album-modal-header">
+      <img loading="lazy" decoding="async" src="https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/About/WEBLOGO.png" alt="Logo" style="height:32px;width:auto;filter:drop-shadow(0 0 6px rgba(203,141,255,0.3));flex-shrink:0;">
+      <h2 class="album-modal-title" id="albumModalTitle" style="display:none;"></h2>
+      <nav class="album-modal-nav" style="flex:1;display:flex;justify-content:center;">
+        <ul style="display:flex;gap:0;list-style:none;flex-wrap:nowrap;">
+          <li><a href="#inicio" onclick="closeAlbum()"
+              style="color:rgba(240,246,252,0.85);text-decoration:none;font-size:0.68rem;font-weight:500;letter-spacing:1.4px;text-transform:uppercase;padding:0.4rem 0.75rem;display:block;transition:color 0.3s;"
+              data-es="Inicio" data-en="Home">Inicio</a></li>
+          <li><a href="#nosotros" onclick="closeAlbum()"
+              style="color:rgba(240,246,252,0.85);text-decoration:none;font-size:0.68rem;font-weight:500;letter-spacing:1.4px;text-transform:uppercase;padding:0.4rem 0.75rem;display:block;transition:color 0.3s;"
+              data-es="Nosotros" data-en="About">Nosotros</a></li>
+          <li><a href="#galeria" onclick="closeAlbum()"
+              style="color:rgba(240,246,252,0.85);text-decoration:none;font-size:0.68rem;font-weight:500;letter-spacing:1.4px;text-transform:uppercase;padding:0.4rem 0.75rem;display:block;transition:color 0.3s;"
+              data-es="Galería" data-en="Gallery">Galería</a></li>
+          <li><a href="#videos-section" onclick="closeAlbum()"
+              style="color:rgba(240,246,252,0.85);text-decoration:none;font-size:0.68rem;font-weight:500;letter-spacing:1.4px;text-transform:uppercase;padding:0.4rem 0.75rem;display:block;transition:color 0.3s;"
+              data-es="Videos" data-en="Videos">Videos</a></li>
+          <li><a href="https://cavent.creativeartvideo.com/ent" target="_blank"
+              style="color:rgba(240,246,252,0.85);text-decoration:none;font-size:0.68rem;font-weight:500;letter-spacing:1.4px;text-transform:uppercase;padding:0.4rem 0.75rem;display:block;transition:color 0.3s;"
+              data-es="Entretenimiento" data-en="Entertainment">Entretenimiento</a></li>
+          <li><a href="#contacto" onclick="closeAlbum()"
+              style="color:rgba(240,246,252,0.85);text-decoration:none;font-size:0.68rem;font-weight:500;letter-spacing:1.4px;text-transform:uppercase;padding:0.4rem 0.75rem;display:block;transition:color 0.3s;"
+              data-es="Contacto" data-en="Contact">Contacto</a></li>
+        </ul>
+      </nav>
+      <div style="display:flex;align-items:center;gap:0.75rem;flex-shrink:0;">
+        <span id="albumModalCounter" style="font-size:0.8rem;color:var(--muted);letter-spacing:1px;"></span>
+        <button class="album-modal-close" onclick="closeAlbum()">&times;</button>
+      </div>
+    </div>
+    <div class="album-carousel-area" id="albumCarouselArea">
+      <button class="carousel-btn prev" onclick="carouselNav(-1)">&#8249;</button>
+      <div class="carousel-img-wrap">
+        <img class="album-carousel-img" id="albumCarouselImg" src="" alt="" decoding="async">
+        <button class="carousel-fullscreen-btn" onclick="carouselFullscreen()">
+          &#x26F6; Ver pantalla completa
+        </button>
+      </div>
+      <button class="carousel-btn next" onclick="carouselNav(1)">&#8250;</button>
+    </div>
+    <div class="album-thumbnails" id="albumThumbnails"></div>
+    <div class="album-modal-grid" id="albumModalGrid"></div>
+  </div>
+
+  <!-- VIDEO MODAL -->
+  <div class="video-modal" id="videoModal" onclick="closeVideoModal(event)">
+    <div class="video-modal-inner">
+      <button class="video-modal-close" onclick="closeVideoModal()">&times;</button>
+      <div id="videoModalContent" style="width:100%;border-radius:12px;overflow:hidden;background:#000;"></div>
+    </div>
+  </div>
+
+  <!-- ZOOM MODAL -->
+  <div class="zoom-modal" id="zoomModal" onclick="closeZoom()">
+    <button class="zoom-modal-close" onclick="closeZoom()">&times;</button>
+    <span id="zoomCounter" style="position:absolute;top:2rem;left:50%;transform:translateX(-50%);color:rgba(255,255,255,0.6);font-size:0.8rem;letter-spacing:2px;font-family:var(--font-body);z-index:10;pointer-events:none;"></span>
+    <button onclick="event.stopPropagation(); zoomNav(-1);" style="position:absolute;left:1.5rem;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.7);border:1px solid rgba(203,141,255,0.3);color:var(--foreground);width:52px;height:52px;border-radius:50%;font-size:2rem;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:10;backdrop-filter:blur(10px);transition:all 0.25s ease;">&#8249;</button>
+    <img loading="lazy" decoding="async" src="" alt="Zoom" id="zoomImage" style="transition: opacity 0.5s ease, transform 0.5s ease;">
+    <button onclick="event.stopPropagation(); zoomNav(1);" style="position:absolute;right:1.5rem;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.7);border:1px solid rgba(203,141,255,0.3);color:var(--foreground);width:52px;height:52px;border-radius:50%;font-size:2rem;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:10;backdrop-filter:blur(10px);transition:all 0.25s ease;">&#8250;</button>
+  </div>
+
+  <!-- VIDEOS SECTION -->
+  <section class="section" id="videos-section" style="text-align:center;">
+    <div class="section-header">
+      <p class="section-subtitle" data-es="Nuestros Films" data-en="Our Films">Nuestros Films</p>
+      <h2 class="section-title" data-es="Videos" data-en="Videos">Videos</h2>
+      <div class="section-line"></div>
+    </div>
+    <p style="color: var(--muted); max-width: 500px; margin: 0 auto 2.5rem; line-height: 1.8;"
+      data-es="Descubre nuestros trabajos cinematográficos. Cada video es una historia contada con luz, música y emoción."
+      data-en="Discover our cinematic work. Each video is a story told with light, music and emotion.">Descubre nuestros
+      trabajos cinematográficos. Cada video es una historia contada con luz, música y emoción.</p>
+    <button class="videos-open-btn" onclick="openVideosPage()">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+      <span data-es="Ver Videos" data-en="Watch Videos">Ver Videos</span>
+    </button>
+  </section>
+
+  <!-- VIDEOS PAGE -->
+  <div class="videos-page" id="videosPage">
+    <div class="videos-page-header">
+      <nav class="albums-top-nav" style="position:static;border-bottom:none;padding:0.85rem 2rem;">
+        <img loading="lazy" decoding="async" src="https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/About/WEBLOGO.png" alt="Logo" class="albums-nav-logo">
+        <ul class="albums-nav-links">
+          <li><a href="#inicio" onclick="closeVideosPage()" data-es="Inicio" data-en="Home">Inicio</a></li>
+          <li><a href="#nosotros" onclick="closeVideosPage()" data-es="Nosotros" data-en="About">Nosotros</a></li>
+          <li><a href="#galeria" onclick="closeVideosPage()" data-es="Galería" data-en="Gallery">Galería</a></li>
+          <li><a href="#videos-section" onclick="closeVideosPage()" data-es="Videos" data-en="Videos">Videos</a></li>
+          <li><a href="https://cavent.creativeartvideo.com/ent" target="_blank" data-es="Entretenimiento"
+              data-en="Entertainment">Entretenimiento</a></li>
+          <li><a href="#contacto" onclick="closeVideosPage()" data-es="Contacto" data-en="Contact">Contacto</a></li>
+        </ul>
+        <button class="albums-page-close" onclick="closeVideosPage()">&times;</button>
+      </nav>
+    </div>
+    <div class="videos-page-body">
+
+      <!-- TABS -->
+      <div style="display:flex;justify-content:center;gap:1rem;margin-bottom:2rem;">
+        <button id="tabQuinces" onclick="switchVideoTab('quinces')" style="padding:0.6rem 1.8rem;border-radius:50px;border:1px solid var(--crystal-blue);background:var(--crystal-blue);color:#050505;font-family:var(--font-body);font-size:0.85rem;font-weight:600;letter-spacing:1px;cursor:pointer;transition:all 0.3s;">XV AÑOS</button>
+        <button id="tabWeddings" onclick="switchVideoTab('weddings')" style="padding:0.6rem 1.8rem;border-radius:50px;border:1px solid var(--crystal-blue);background:transparent;color:var(--crystal-blue);font-family:var(--font-body);font-size:0.85rem;font-weight:600;letter-spacing:1px;cursor:pointer;transition:all 0.3s;">BODAS</button>
+      </div>
+
+      <!-- TAB QUINCES -->
+      <div id="panelQuinces">
+        <!-- VIDEO PRINCIPAL QUINCES — link del RTF: https://vimeo.com/909282564 -->
+        <div class="video-hero-layout">
+          <div class="video-hero-left">
+            <div class="video-hero-text">
+              <p class="video-hero-tag" data-es="XV AÑOS · CINEMATOGRAFÍA" data-en="QUINCEAÑERA · CINEMATOGRAPHY">XV
+                AÑOS · CINEMATOGRAFÍA</p>
+              <h2 class="video-hero-title" data-es="Momentos que" data-en="Moments that">Momentos que</h2>
+              <h2 class="video-hero-title-italic" data-es="no se repiten" data-en="don't repeat">no se repiten</h2>
+              <div class="video-hero-divider"></div>
+              <p class="video-hero-desc"
+                data-es="Capturamos la esencia de tu historia con imágenes que perduran para siempre."
+                data-en="We capture the essence of your story with images that last forever.">Capturamos la esencia de
+                tu historia con imágenes que perduran para siempre.</p>
+            </div>
+            <div class="video-hero-small" style="cursor:default;overflow:hidden;position:relative;">
+              <iframe loading="lazy"
+                src="https://player.vimeo.com/video/909282564?autoplay=1&muted=1&loop=1&background=1&controls=0"
+                style="position:absolute;top:50%;left:50%;width:177.78%;height:177.78%;transform:translate(-50%,-50%);border:0;pointer-events:none;"
+                allow="autoplay; fullscreen" frameborder="0">
+              </iframe>
+              <div style="position:absolute;inset:0;z-index:2;cursor:pointer;"
+                onclick="openVideoModal('https://vimeo.com/909282564')"></div>
+            </div>
+          </div>
+          <div class="video-hero-right">
+            <img loading="lazy" decoding="async" src="https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/VIMEO%20BANNERS/Banner%20Quinceanera.jpg" alt="Quinces" class="video-hero-bg-img">
+          </div>
+        </div>
+
+        <h3
+          style="text-align:center;font-family:var(--font-heading);font-size:1.4rem;margin-bottom:1.5rem;color:var(--crystal-blue);"
+          data-es="Más Videos" data-en="More Videos">Más Videos</h3>
+
+        <div class="videos-grid">
+          <!-- Jeanette — https://vimeo.com/908825763 -->
+          <div class="video-card" onclick="openVideoModal('https://vimeo.com/908825763')">
+            <img loading="lazy" decoding="async" src="https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/VIMEO%20BANNERS/Jeanette15.jpg" alt="Jeanette">
+            <div class="video-card-overlay">
+              <div class="video-card-play"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                  viewBox="0 0 24 24">
+                  <path d="M8 5v14l11-7z" />
+                </svg></div>
+            </div>
+            <div class="video-card-label">Jeanette · XV Años</div>
+          </div>
+          <!-- Sydney — https://vimeo.com/909263459 -->
+          <div class="video-card" onclick="openVideoModal('https://vimeo.com/909263459')">
+            <img loading="lazy" decoding="async" src="https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/VIMEO%20BANNERS/Sydney.jpg" alt="Sydney">
+            <div class="video-card-overlay">
+              <div class="video-card-play"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                  viewBox="0 0 24 24">
+                  <path d="M8 5v14l11-7z" />
+                </svg></div>
+            </div>
+            <div class="video-card-label">Sydney · XV Años</div>
+          </div>
+          <!-- Ashley — https://vimeo.com/913404394 -->
+          <div class="video-card" onclick="openVideoModal('https://vimeo.com/913404394')">
+            <img loading="lazy" decoding="async" src="https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/VIMEO%20BANNERS/ASHLEY.jpg" alt="Ashley">
+            <div class="video-card-overlay">
+              <div class="video-card-play"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                  viewBox="0 0 24 24">
+                  <path d="M8 5v14l11-7z" />
+                </svg></div>
+            </div>
+            <div class="video-card-label">Ashley · XV Años</div>
+          </div>
+          <!-- Strella — https://vimeo.com/913423792 -->
+          <div class="video-card" onclick="openVideoModal('https://vimeo.com/913423792')">
+            <img loading="lazy" decoding="async" src="https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/VIMEO%20BANNERS/Strella.jpg" alt="Strella">
+            <div class="video-card-overlay">
+              <div class="video-card-play"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                  viewBox="0 0 24 24">
+                  <path d="M8 5v14l11-7z" />
+                </svg></div>
+            </div>
+            <div class="video-card-label">Strella · XV Años</div>
+          </div>
+          <!-- Tamara — https://vimeo.com/181943716 -->
+          <div class="video-card" onclick="openVideoModal('https://vimeo.com/181943716')">
+            <img loading="lazy" decoding="async" src="https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/VIMEO%20BANNERS/Tamara.jpg" alt="Tamara">
+            <div class="video-card-overlay">
+              <div class="video-card-play"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                  viewBox="0 0 24 24">
+                  <path d="M8 5v14l11-7z" />
+                </svg></div>
+            </div>
+            <div class="video-card-label">Tamara · XV Años</div>
+          </div>
+          <!-- Paris — https://vimeo.com/222308196 -->
+          <div class="video-card" onclick="openVideoModal('https://vimeo.com/222308196')">
+            <img loading="lazy" decoding="async" src="https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/VIMEO%20BANNERS/Paris.jpg" alt="Paris">
+            <div class="video-card-overlay">
+              <div class="video-card-play"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                  viewBox="0 0 24 24">
+                  <path d="M8 5v14l11-7z" />
+                </svg></div>
+            </div>
+            <div class="video-card-label">Paris · XV Años</div>
+          </div>
+          <!-- Music Video 1 — https://vimeo.com/909286111 -->
+          <div class="video-card" onclick="openVideoModal('https://vimeo.com/909286111')">
+            <img loading="lazy" decoding="async" src="https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/VIMEO%20BANNERS/Music%20Video.jpg" alt="Music Video">
+            <div class="video-card-overlay">
+              <div class="video-card-play"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                  viewBox="0 0 24 24">
+                  <path d="M8 5v14l11-7z" />
+                </svg></div>
+            </div>
+            <div class="video-card-label">Music Video</div>
+          </div>
+          <!-- Isabelle — https://vimeo.com/909286712 -->
+          <div class="video-card" onclick="openVideoModal('https://vimeo.com/909286712')">
+            <img loading="lazy" decoding="async" src="https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/VIMEO%20BANNERS/Isabelle.jpg" alt="Isabelle">
+            <div class="video-card-overlay">
+              <div class="video-card-play"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                  viewBox="0 0 24 24">
+                  <path d="M8 5v14l11-7z" />
+                </svg></div>
+            </div>
+            <div class="video-card-label">Isabelle · Music Video</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB WEDDINGS -->
+      <div id="panelWeddings" style="display:none;">
+        <!-- VIDEO PRINCIPAL WEDDINGS — https://vimeo.com/913103631 -->
+        <div class="video-hero-layout">
+          <div class="video-hero-left">
+            <div class="video-hero-text">
+              <p class="video-hero-tag" data-es="BODAS · CINEMATOGRAFÍA" data-en="WEDDINGS · CINEMATOGRAPHY">BODAS ·
+                CINEMATOGRAFÍA</p>
+              <h2 class="video-hero-title" data-es="Momentos que" data-en="Moments that">Momentos que</h2>
+              <h2 class="video-hero-title-italic" data-es="no se repiten" data-en="don't repeat">no se repiten</h2>
+              <div class="video-hero-divider"></div>
+              <p class="video-hero-desc"
+                data-es="Capturamos la esencia de tu historia con imágenes que perduran para siempre."
+                data-en="We capture the essence of your story with images that last forever.">Capturamos la esencia de
+                tu historia con imágenes que perduran para siempre.</p>
+            </div>
+            <div class="video-hero-small" style="cursor:default;overflow:hidden;position:relative;">
+              <iframe loading="lazy"
+                src="https://player.vimeo.com/video/913103631?autoplay=1&muted=1&loop=1&background=1&controls=0"
+                style="position:absolute;top:50%;left:50%;width:177.78%;height:177.78%;transform:translate(-50%,-50%);border:0;pointer-events:none;"
+                allow="autoplay; fullscreen" frameborder="0">
+              </iframe>
+              <div style="position:absolute;inset:0;z-index:2;cursor:pointer;"
+                onclick="openVideoModal('https://vimeo.com/913103631')"></div>
+            </div>
+          </div>
+          <div class="video-hero-right">
+            <img loading="lazy" decoding="async" src="https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/VIMEO%20BANNERS/BannerBODA.jpg" alt="Bodas" class="video-hero-bg-img video-hero-bg-img--boda">
+          </div>
+        </div>
+
+        <h3
+          style="text-align:center;font-family:var(--font-heading);font-size:1.4rem;margin-bottom:1.5rem;color:var(--crystal-blue);"
+          data-es="Más Videos" data-en="More Videos">Más Videos</h3>
+
+        <div class="videos-grid">
+          <!-- Yvette — https://vimeo.com/908831296 -->
+          <div class="video-card" onclick="openVideoModal('https://vimeo.com/908831296')">
+            <img loading="lazy" decoding="async" src="https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/VIMEO%20BANNERS/Yvette.jpg" alt="Yvette">
+            <div class="video-card-overlay">
+              <div class="video-card-play"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                  viewBox="0 0 24 24">
+                  <path d="M8 5v14l11-7z" />
+                </svg></div>
+            </div>
+            <div class="video-card-label">Yvette & Fernando · Boda</div>
+          </div>
+          <!-- Anabel y Freddy — https://vimeo.com/909283502 -->
+          <div class="video-card" onclick="openVideoModal('https://vimeo.com/909283502')">
+            <img loading="lazy" decoding="async" src="https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/VIMEO%20BANNERS/Anabelyfreddy.jpg" alt="Anabel y Freddy">
+            <div class="video-card-overlay">
+              <div class="video-card-play"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                  viewBox="0 0 24 24">
+                  <path d="M8 5v14l11-7z" />
+                </svg></div>
+            </div>
+            <div class="video-card-label">Anabel & Freddy · Boda</div>
+          </div>
+          <!-- Julio — https://vimeo.com/192075723 -->
+          <div class="video-card" onclick="openVideoModal('https://vimeo.com/192075723')">
+            <img loading="lazy" decoding="async" src="https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/VIMEO%20BANNERS/julio.jpg" alt="Julio">
+            <div class="video-card-overlay">
+              <div class="video-card-play"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                  viewBox="0 0 24 24">
+                  <path d="M8 5v14l11-7z" />
+                </svg></div>
+            </div>
+            <div class="video-card-label">Julio · Boda</div>
+          </div>
+          <!-- Nathaly — https://vimeo.com/909281356 -->
+          <div class="video-card" onclick="openVideoModal('https://vimeo.com/909281356')">
+            <img loading="lazy" decoding="async" src="https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/VIMEO%20BANNERS/Nathaly.jpg" alt="Nathaly">
+            <div class="video-card-overlay">
+              <div class="video-card-play"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                  viewBox="0 0 24 24">
+                  <path d="M8 5v14l11-7z" />
+                </svg></div>
+            </div>
+            <div class="video-card-label">Nathaly · Boda</div>
+          </div>
+          <!-- Love Story — https://vimeo.com/235672142 -->
+          <div class="video-card" onclick="openVideoModal('https://vimeo.com/235672142')">
+            <img loading="lazy" decoding="async" src="https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/VIMEO%20BANNERS/wedding.jpg" alt="Love Story">
+            <div class="video-card-overlay">
+              <div class="video-card-play"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                  viewBox="0 0 24 24">
+                  <path d="M8 5v14l11-7z" />
+                </svg></div>
+            </div>
+            <div class="video-card-label">Boda · Love Story</div>
+          </div>
+          <!-- Villa Punta del Cielo — https://videos.creativeartvideo.com/VILLA2026.mp4 -->
+          <div class="video-card" onclick="openVideoModal('https://videos.creativeartvideo.com/VILLA2026.mp4')">
+            <img loading="lazy" decoding="async" src="https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/VIMEO%20BANNERS/LOVESTORY.jpg" alt="Villa Punta del Cielo">
+            <div class="video-card-overlay">
+              <div class="video-card-play"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                  viewBox="0 0 24 24">
+                  <path d="M8 5v14l11-7z" />
+                </svg></div>
+            </div>
+            <div class="video-card-label">Villa Punta del Cielo</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ENTERTAINMENT -->
+  <section class="section entertainment-section" id="entretenimiento" style="display:none;">
+    <div class="section-header">
+      <p class="section-subtitle" data-es="Eventos Especiales" data-en="Special Events">Eventos Especiales</p>
+      <h2 class="section-title" data-es="Entretenimiento" data-en="Entertainment">Entretenimiento</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="entertainment-grid">
+      <div class="entertainment-item" onclick="openZoom('assets/entertainment-foto1.jpg')"><img loading="lazy" decoding="async" src="assets/entertainment-foto1.jpg" alt="Entretenimiento 1">
+      </div>
+      <div class="entertainment-item" onclick="openZoom('assets/entertainment-foto2.jpg')"><img loading="lazy" decoding="async" src="assets/entertainment-foto2.jpg" alt="Entretenimiento 2">
+      </div>
+      <div class="entertainment-logo"><img loading="lazy" decoding="async" src="https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/About/WEBLOGO.png" alt="Creative Art Video">
+      </div>
+      <div class="entertainment-item" onclick="openZoom('assets/entertainment-foto3.jpg')"><img loading="lazy" decoding="async" src="assets/entertainment-foto3.jpg" alt="Entretenimiento 3">
+      </div>
+      <div class="entertainment-item" onclick="openZoom('assets/entertainment-foto4.jpg')"><img loading="lazy" decoding="async" src="assets/entertainment-foto4.jpg" alt="Entretenimiento 4">
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section" id="contacto">
+    <div class="section-header">
+      <p class="section-subtitle" data-es="Hablemos" data-en="Let's Talk">Hablemos</p>
+      <h2 class="section-title" data-es="Contacto" data-en="Contact">Contacto</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h3 data-es="Hagamos Realidad Tu Sueño" data-en="Let's Make Your Dream Come True">Hagamos Realidad Tu Sueño</h3>
+        <p data-es="Estamos listos para capturar los momentos más especiales de tu vida. Contáctanos para conocer más sobre nuestros servicios y paquetes personalizados."
+          data-en="We are ready to capture the most special moments of your life. Contact us to learn more about our services and personalized packages.">
+          Estamos listos para capturar los momentos más especiales de tu vida. Contáctanos para conocer más sobre
+          nuestros servicios y paquetes personalizados.</p>
+        <div class="contact-details">
+          <div class="contact-item">
+            <div class="contact-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg></div>
+            <div>
+              <div class="contact-label" data-es="Teléfono" data-en="Phone">Teléfono</div>
+              <div class="contact-text"><a href="tel:+12135870282">+1 213-587-0282</a></div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg></div>
+            <div>
+              <div class="contact-label" data-es="Ubicación" data-en="Location">Ubicación</div>
+              <div class="contact-text" data-es="Solo por cita" data-en="By appointment only">Solo por cita</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="width:20px;height:20px;"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.46 1.32 4.96L2.05 22l5.25-1.38a9.9 9.9 0 004.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0012.04 2zm5.83 14.17c-.24.68-1.41 1.32-1.95 1.4-.5.08-1.13.11-1.83-.12-.42-.13-.96-.31-1.65-.6-2.9-1.25-4.8-4.17-4.94-4.36-.14-.19-1.18-1.57-1.18-3 0-1.42.75-2.12 1.01-2.41.27-.29.58-.36.78-.36.19 0 .39 0 .56.01.18.01.42-.07.65.5.24.58.82 2 .89 2.15.07.14.12.31.02.5-.09.19-.14.31-.28.48-.14.16-.29.37-.42.49-.14.14-.28.28-.12.56.16.28.71 1.17 1.52 1.9 1.05.94 1.93 1.23 2.21 1.37.28.14.44.12.6-.07.16-.19.68-.79.87-1.06.18-.28.37-.23.62-.14.26.09 1.63.77 1.91.91.28.14.47.21.53.33.07.12.07.68-.17 1.35z"/></svg></div>
+            <div>
+              <div class="contact-label" data-es="WhatsApp" data-en="WhatsApp">WhatsApp</div>
+              <div class="contact-text"><a href="https://wa.me/12135870282" target="_blank" rel="noopener">+1 213-587-0282</a></div>
+            </div>
+          </div>
+        </div>
+        <a href="tel:+12135870282" class="hero-btn liquid-glass-strong"
+          style="display:inline-block;margin-top:1.5rem;font-size:0.75rem;padding:0.85rem 2.2rem;border-radius:50px;"
+          data-es="Reserva Tu Cita" data-en="Book Your Appointment">Reserva Tu Cita</a>
+      </div>
+      <div>
+        <form class="contact-form" id="contactForm">
+          <div class="form-group"><label class="form-label" data-es="Nombre" data-en="Name">Nombre</label><input type="text" class="form-input" name="nombre" id="formNombre" placeholder="Tu nombre completo" data-placeholder-es="Tu nombre completo" data-placeholder-en="Your full name" required>
+          </div>
+          <div class="form-group"><label class="form-label" data-es="Correo" data-en="Email">Correo</label><input type="email" class="form-input" name="email" id="formEmail" placeholder="tu@correo.com" data-placeholder-es="tu@correo.com" data-placeholder-en="you@email.com">
+          </div>
+          <div class="form-group"><label class="form-label" data-es="Teléfono" data-en="Phone">Teléfono</label><input type="tel" class="form-input" name="telefono" id="formTelefono" placeholder="+1 213-587-0282">
+          </div>
+          <div class="form-group">
+            <label class="form-label" data-es="Mensaje" data-en="Message">Mensaje</label><textarea class="form-input" name="mensaje" id="formMensaje" placeholder="Cuéntanos sobre tu evento..." data-placeholder-es="Cuéntanos sobre tu evento..." data-placeholder-en="Tell us about your event..."></textarea>
+          </div>
+          <button type="submit" class="form-btn" id="formBtn" data-es="Enviar Mensaje" data-en="Send Message">Enviar Mensaje</button>
+        </form>
+        <div class="form-success" id="formSuccess">
+          <h3 data-es="¡Mensaje Enviado!" data-en="Message Sent!">¡Mensaje Enviado!</h3>
+          <p data-es="Gracias por contactarnos. Nos pondremos en contacto contigo pronto."
+            data-en="Thank you for contacting us. We will get back to you soon.">Gracias por contactarnos. Nos pondremos
+            en contacto contigo pronto.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <img loading="lazy" decoding="async" src="https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/About/WEBLOGO.png" alt="Creative Art Video" class="footer-logo">
+    <div class="footer-links">
+      <a href="#inicio" data-es="Inicio" data-en="Home">Inicio</a>
+      <a href="#nosotros" data-es="Nosotros" data-en="About">Nosotros</a>
+      <a href="#galeria" data-es="Galería" data-en="Gallery">Galería</a>
+      <a href="#videos-section" data-es="Videos" data-en="Videos">Videos</a>
+      <a href="#contacto" data-es="Contacto" data-en="Contact">Contacto</a>
+    </div>
+    <div class="footer-social">
+      <a href="https://www.facebook.com/creativeartv?mibextid=wwXIfr" target="_blank" aria-label="Facebook">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+          <path
+            d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+        </svg>
+      </a>
+      <a href="https://www.instagram.com/creativeartvideo?igsh=NTc4MTIwNjQ2YQ%3D%3D&utm_source=qr" target="_blank"
+        aria-label="Instagram">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+          <path
+            d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+        </svg>
+      </a>
+      <a href="https://www.youtube.com/@creativeartvideo" target="_blank" aria-label="YouTube">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+          <path
+            d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+        </svg>
+      </a>
+    </div>
+    <p class="footer-address">11490 Burbank Blvd #3A, North Hollywood, CA 91601</p>
+    <p class="footer-copy">&copy; 2024 Creative Art Video.
+      <span data-es="Todos los derechos reservados." data-en="All rights reserved.">Todos los derechos reservados.</span>
+    </p>
+  </footer>
+
+  <!-- WHATSAPP FLOATING BUTTON -->
+  <a class="whatsapp-btn" id="whatsappBtn" href="https://wa.me/12135870282" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.46 1.32 4.96L2.05 22l5.25-1.38a9.9 9.9 0 004.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0012.04 2zm5.83 14.17c-.24.68-1.41 1.32-1.95 1.4-.5.08-1.13.11-1.83-.12-.42-.13-.96-.31-1.65-.6-2.9-1.25-4.8-4.17-4.94-4.36-.14-.19-1.18-1.57-1.18-3 0-1.42.75-2.12 1.01-2.41.27-.29.58-.36.78-.36.19 0 .39 0 .56.01.18.01.42-.07.65.5.24.58.82 2 .89 2.15.07.14.12.31.02.5-.09.19-.14.31-.28.48-.14.16-.29.37-.42.49-.14.14-.28.28-.12.56.16.28.71 1.17 1.52 1.9 1.05.94 1.93 1.23 2.21 1.37.28.14.44.12.6-.07.16-.19.68-.79.87-1.06.18-.28.37-.23.62-.14.26.09 1.63.77 1.91.91.28.14.47.21.53.33.07.12.07.68-.17 1.35z"/></svg>
+  </a>
+
+  <!-- JAVASCRIPT -->
+  <script>
+    // LANGUAGE — global para que los onclick del HTML funcionen
+    let currentLang = 'es';
+    function setLanguage(lang) {
+      currentLang = lang;
+      document.getElementById('langEs').classList.toggle('active', lang === 'es');
+      document.getElementById('langEn').classList.toggle('active', lang === 'en');
+      document.getElementById('htmlRoot').setAttribute('lang', lang);
+      document.querySelectorAll('[data-es]').forEach(el => { el.textContent = el.getAttribute('data-' + lang); });
+      document.querySelectorAll('[data-placeholder-es]').forEach(el => { el.placeholder = el.getAttribute('data-placeholder-' + lang); });
+      localStorage.setItem('preferredLang', lang);
+      if (typeof updateCaptionBox === 'function') updateCaptionBox(currentSlide || 0);
+    }
+    const savedLang = localStorage.getItem('preferredLang');
+    if (savedLang) setLanguage(savedLang);
+
+    // Todo lo demás dentro de DOMContentLoaded para garantizar que el DOM esté listo en móvil
+    document.addEventListener('DOMContentLoaded', function() {
+
+    // LOADING
+    const loadingScreen = document.getElementById('loadingScreen');
+    const loadingLogo = loadingScreen ? loadingScreen.querySelector('img') : null;
+    function hideLoader() { if (loadingScreen) loadingScreen.classList.add('hidden'); }
+    const maxWait = setTimeout(hideLoader, 1200);
+    if (loadingLogo) {
+      if (loadingLogo.complete) { clearTimeout(maxWait); setTimeout(hideLoader, 600); }
+      else { loadingLogo.addEventListener('load', function() { clearTimeout(maxWait); setTimeout(hideLoader, 400); }); }
+    }
+    window.addEventListener('load', function() { clearTimeout(maxWait); setTimeout(hideLoader, 300); });
+
+    // HEADER SCROLL
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', function() {
+      header.classList.toggle('scrolled', window.scrollY > 60);
+    }, { passive: true });
+
+    // MOBILE MENU
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileNav = document.getElementById('mobileNav');
+    const closeMobileMenu = document.getElementById('closeMobileMenu');
+    mobileMenuBtn.addEventListener('click', () => mobileNav.classList.add('active'));
+    closeMobileMenu.addEventListener('click', () => mobileNav.classList.remove('active'));
+    mobileNav.querySelectorAll('a').forEach(link => { link.addEventListener('click', () => mobileNav.classList.remove('active')); });
+
+    // SLIDESHOW
+    const slides = document.querySelectorAll('.slide-item');
+    const dotsContainer = document.getElementById('slideDots');
+    let currentSlide = 0, slideTimer;
+
+    // Datos de cada slide para el caption externo
+    const SLIDE_CAPTIONS = [
+      { tag: { es: 'XV Años', en: 'Quinceañera' }, text: { es: 'Quince años de sueños, de gracia y de una princesa que apenas comienza su historia.', en: 'Fifteen years of dreams, grace, and a princess just beginning her story.' } },
+      { tag: { es: 'XV Años', en: 'Quinceañera' }, text: { es: 'Cada momento, una obra de arte capturada con pasión y elegancia.', en: 'Every moment, a work of art captured with passion and elegance.' } },
+      { tag: { es: 'XV Años', en: 'Quinceañera' }, text: { es: 'La magia de sus quince, guardada para siempre en cada imagen.', en: 'The magic of her quinceañera, forever preserved in every image.' } },
+      { tag: { es: 'Bodas', en: 'Weddings' }, text: { es: 'El día que prometieron amarse para siempre, nosotros lo guardamos para siempre.', en: 'The day they promised to love each other forever — we kept it forever.' } },
+    ];
+
+    function updateCaptionBox(index) {
+      const lang = currentLang || 'es';
+      const c = SLIDE_CAPTIONS[index];
+      if (!c) return;
+      const tagEl = document.getElementById('slideCaptionTag');
+      const textEl = document.getElementById('slideCaptionText');
+      if (tagEl) tagEl.textContent = c.tag[lang];
+      if (textEl) textEl.textContent = c.text[lang];
+    }
+    slides.forEach((_, i) => {
+      const dot = document.createElement('button');
+      dot.className = 'slide-dot' + (i === 0 ? ' active' : '');
+      dot.setAttribute('aria-label', 'Slide ' + (i + 1));
+      dot.addEventListener('click', () => goToSlide(i));
+      dotsContainer.appendChild(dot);
+    });
+    function goToSlide(n) {
+      slides[currentSlide].classList.remove('active');
+      document.querySelectorAll('.slide-dot')[currentSlide].classList.remove('active');
+      currentSlide = (n + slides.length) % slides.length;
+      slides[currentSlide].classList.add('active');
+      document.querySelectorAll('.slide-dot')[currentSlide].classList.add('active');
+      updateCaptionBox(currentSlide);
+      resetTimer();
+    }
+    function changeSlide(dir) { goToSlide(currentSlide + dir); }
+    function resetTimer() { clearInterval(slideTimer); slideTimer = setInterval(() => changeSlide(1), 5000); }
+    document.getElementById('slideshowTrack').addEventListener('click', function(e) {
+      if (e.target.closest('.slide-arrow')) return;
+      const activeSlide = document.querySelector('.slide-item.active img');
+      if (activeSlide) openZoom(activeSlide.src);
+    });
+    resetTimer();
+    updateCaptionBox(0);
+
+    // ALBUMS PAGE
+    function openAlbumsPage() { document.getElementById('albumsPage').classList.add('active'); document.body.style.overflow = 'hidden'; }
+    function closeAlbumsPage() { document.getElementById('albumsPage').classList.remove('active'); document.body.style.overflow = ''; }
+
+    // VIDEOS PAGE
+    function openVideosPage() { document.getElementById('videosPage').classList.add('active'); document.body.style.overflow = 'hidden'; }
+    function closeVideosPage() { document.getElementById('videosPage').classList.remove('active'); document.body.style.overflow = ''; }
+
+    // ZOOM con navegación y autoplay
+    let _zoomPhotos = [];
+    let _zoomIndex = 0;
+    let _zoomTimer = null;
+
+    function _zoomGetPhotos() {
+      // Recopila fotos visibles de la galería de fotografía (.foto-item)
+      const items = document.querySelectorAll('.foto-item:not(.hidden) img');
+      if (items.length > 0) return Array.from(items).map(img => img.src);
+      // Fallback: cualquier foto en el slideshow principal
+      return Array.from(document.querySelectorAll('.slide-item img')).map(img => img.src);
+    }
+
+    function _zoomRender(animate) {
+      const img = document.getElementById('zoomImage');
+      const counter = document.getElementById('zoomCounter');
+      if (counter) counter.textContent = (_zoomIndex + 1) + ' / ' + _zoomPhotos.length;
+      if (animate) {
+        img.style.opacity = '0';
+        img.style.transform = 'scale(0.98)';
+        setTimeout(() => {
+          img.src = _zoomPhotos[_zoomIndex];
+          img.style.opacity = '1';
+          img.style.transform = 'scale(1)';
+        }, 500);
+      } else {
+        img.src = _zoomPhotos[_zoomIndex];
+      }
+    }
+
+    function _zoomNav(dir) {
+      _zoomIndex = (_zoomIndex + dir + _zoomPhotos.length) % _zoomPhotos.length;
+      _zoomRender(true);
+      _zoomResetTimer();
+    }
+
+    function _zoomStartTimer() {
+      _zoomClearTimer();
+      _zoomTimer = setInterval(() => _zoomNav(1), 4000);
+    }
+
+    function _zoomClearTimer() {
+      if (_zoomTimer) { clearInterval(_zoomTimer); _zoomTimer = null; }
+    }
+
+    function _zoomResetTimer() { _zoomStartTimer(); }
+
+    function openZoom(src) {
+      _zoomPhotos = _zoomGetPhotos();
+      // Buscar índice de la foto clickeada
+      const idx = _zoomPhotos.findIndex(s => s === src || s.endsWith(src.split('/').pop()));
+      _zoomIndex = idx >= 0 ? idx : 0;
+      const modal = document.getElementById('zoomModal');
+      _zoomRender(false);
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+      _zoomStartTimer();
+    }
+
+    function closeZoom() {
+      document.getElementById('zoomModal').classList.remove('active');
+      document.body.style.overflow = '';
+      _zoomClearTimer();
+    }
+
+    // Teclado para zoom
+    document.addEventListener('keydown', e => {
+      if (!document.getElementById('zoomModal').classList.contains('active')) return;
+      if (e.key === 'ArrowRight') _zoomNav(1);
+      if (e.key === 'ArrowLeft') _zoomNav(-1);
+      if (e.key === 'Escape') closeZoom();
+    });
+
+    // Exponer navegación del zoom globalmente
+    window.zoomNav = _zoomNav;
+
+    // VIDEO TABS
+    function switchVideoTab(tab) {
+      const isQ = tab === 'quinces';
+      document.getElementById('panelQuinces').style.display = isQ ? 'block' : 'none';
+      document.getElementById('panelWeddings').style.display = isQ ? 'none' : 'block';
+      document.getElementById('tabQuinces').style.background = isQ ? 'var(--crystal-blue)' : 'transparent';
+      document.getElementById('tabQuinces').style.color = isQ ? '#050505' : 'var(--crystal-blue)';
+      document.getElementById('tabWeddings').style.background = isQ ? 'transparent' : 'var(--crystal-blue)';
+      document.getElementById('tabWeddings').style.color = isQ ? 'var(--crystal-blue)' : '#050505';
+    }
+
+    // VIDEO HELPERS
+    function isVimeo(url) { return /vimeo\.com/.test(url); }
+    function getVimeoId(url) { const m = url.match(/vimeo\.com\/(\d+)/); return m ? m[1] : null; }
+
+    // ALBUM DATA
+    const ALBUM_DATA = {
+      alma: ['https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/AlbumsQuinceanera/Album15%3A1/28x11_album_ALMA_01.jpg','https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/AlbumsQuinceanera/Album15%3A1/28x11_album_ALMA_02.jpg','https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/AlbumsQuinceanera/Album15%3A1/28x11_album_ALMA_03.jpg','https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/AlbumsQuinceanera/Album15%3A1/28x11_album_ALMA_04.jpg','https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/AlbumsQuinceanera/Album15%3A1/28x11_album_ALMA_05.jpg','https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/AlbumsQuinceanera/Album15%3A1/28x11_album_ALMA_07.jpg','https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/AlbumsQuinceanera/Album15%3A1/28x11_album_ALMA_08.jpg','https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/AlbumsQuinceanera/Album15%3A1/28x11_album_ALMA_09.jpg','https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/AlbumsQuinceanera/Album15%3A1/28x11_album_ALMA_10.jpg','https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/AlbumsQuinceanera/Album15%3A1/28x11_album_ALMA_11.jpg','https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/AlbumsQuinceanera/Album15%3A1/28x11_album_ALMA_13.jpg','https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/AlbumsQuinceanera/Album15%3A1/28x11_album_ALMA_14.jpg'],
+      paulina: ['https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/AlbumsQuinceanera/Album15%3A2/PAULINA_01.jpg','https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/AlbumsQuinceanera/Album15%3A2/PAULINA_02.jpg','https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/AlbumsQuinceanera/Album15%3A2/PAULINA_03.jpg','https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/AlbumsQuinceanera/Album15%3A2/PAULINA_04.jpg','https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/AlbumsQuinceanera/Album15%3A2/PAULINA_05.jpg','https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/AlbumsQuinceanera/Album15%3A2/PAULINA_06.jpg','https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/AlbumsQuinceanera/Album15%3A2/PAULINA_07.jpg','https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/AlbumsQuinceanera/Album15%3A2/PAULINA_08.jpg','https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/AlbumsQuinceanera/Album15%3A2/PAULINA_09.jpg','https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/AlbumsQuinceanera/Album15%3A2/PAULINA_10.jpg','https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/AlbumsQuinceanera/Album15%3A2/PAULINA_11.jpg','https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/AlbumsQuinceanera/Album15%3A2/PAULINA_12.jpg','https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/AlbumsQuinceanera/Album15%3A2/PAULINA_13.jpg','https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/AlbumsQuinceanera/Album15%3A2/PAULINA_14.jpg','https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/AlbumsQuinceanera/Album15%3A2/PAULINA_15.jpg','https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/AlbumsQuinceanera/Album15%3A2/PAULINA_16.jpg','https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/AlbumsQuinceanera/Album15%3A2/PAULINA_17.jpg'],
+      yvette: ['https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/Albums%20Bodas/AlbumWedding/Yvette%20and%20Fernando%20Page%201.jpg','https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/Albums%20Bodas/AlbumWedding/Yvette%20and%20Fernando%20Page%202.jpg','https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/Albums%20Bodas/AlbumWedding/Yvette%20and%20Fernando%20Page%203.jpg','https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/Albums%20Bodas/AlbumWedding/Yvette%20and%20Fernando%20Page%204.jpg','https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/Albums%20Bodas/AlbumWedding/Yvette%20and%20Fernando%20Page%205.jpg','https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/Albums%20Bodas/AlbumWedding/Yvette%20and%20Fernando%20Page%206.jpg','https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/Albums%20Bodas/AlbumWedding/Yvette%20and%20Fernando%20Page%207.jpg','https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/Albums%20Bodas/AlbumWedding/Yvette%20and%20Fernando%20Page%208.jpg','https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/Albums%20Bodas/AlbumWedding/Yvette%20and%20Fernando%20Page%209%20A.jpg','https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/Albums%20Bodas/AlbumWedding/Yvette%20and%20Fernando%20Page%2010-A.jpg','https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/Albums%20Bodas/AlbumWedding/Yvette%20and%20Fernando%20Page%2011.jpg','https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/Albums%20Bodas/AlbumWedding/Yvette%20and%20Fernando%20Page%2012.jpg','https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/Albums%20Bodas/AlbumWedding/Yvette%20and%20Fernando%20Page%2012-A.jpg','https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/Albums%20Bodas/AlbumWedding/Yvette%20and%20Fernando%20Page%2013.jpg','https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/Albums%20Bodas/AlbumWedding/Yvette%20and%20Fernando%20Page%2014.jpg','https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/Albums%20Bodas/AlbumWedding/Yvette%20and%20Fernando%20Page%2015.jpg','https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/Albums%20Bodas/AlbumWedding/Yvette%20and%20Fernando%20Page%2016.jpg','https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/Albums%20Bodas/AlbumWedding/Yvette%20and%20Fernando%20Page%2017.jpg','https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/Albums%20Bodas/AlbumWedding/Yvette%20and%20Fernando%20Page%2018.jpg','https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/Albums%20Bodas/AlbumWedding/Yvette%20and%20Fernando%20Page%2019.jpg','https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/Albums%20Bodas/AlbumWedding/Yvette%20and%20Fernando%20Page%2021.jpg','https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/Albums%20Bodas/AlbumWedding/Yvette%20and%20Fernando%20Page%2022.jpg','https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/Albums%20Bodas/AlbumWedding/Yvette%20and%20Fernando%20Page%2023.jpg','https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/Albums%20Bodas/AlbumWedding/Yvette%20and%20Fernando%20Page%2024.jpg','https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/Albums%20Bodas/AlbumWedding/Yvette%20and%20Fernando%20Page%2025.jpg','https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/Albums%20Bodas/AlbumWedding/Yvette%20and%20Fernando%20Page%2026.jpg'],
+      guestbook: ['https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/AlbumsQuinceanera/Guestbootk/Serenity%20Valerie%20guest%20book%20A%20copy.jpg','https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/AlbumsQuinceanera/Guestbootk/Serenity%20Valerie%20guest%20book%20C%20copy.jpg','https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/AlbumsQuinceanera/Guestbootk/Serenity%20Valerie%20guest%20book%20D%20copy.jpg','https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/AlbumsQuinceanera/Guestbootk/Serenity%20Valerie%20guest%20book%20E%20copy.jpg','https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/AlbumsQuinceanera/Guestbootk/Serenity%20Valerie%20guest%20book%20bb%20copy.jpg','https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/AlbumsQuinceanera/Guestbootk/Victorian%20Blue%20copy.jpg','https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/AlbumsQuinceanera/Guestbootk/Victorian%20Blue%203%20copy.jpg','https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/AlbumsQuinceanera/Guestbootk/Victorian%20Blue%204%20copy.jpg','https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/AlbumsQuinceanera/Guestbootk/Victorian%20Blue%205%20copy.jpg','https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/AlbumsQuinceanera/Guestbootk/13x10%20clear%20acrilic%20copy.jpg'],
+    };
+
+    // ALBUM CARRUSEL
+    let _carouselPhotos = [];
+    let _carouselIndex = 0;
+
+    function openAlbum(albumKey, title) {
+      _carouselPhotos = ALBUM_DATA[albumKey] || [];
+      _carouselIndex = 0;
+      document.getElementById('albumModalTitle').textContent = title;
+      const thumbs = document.getElementById('albumThumbnails');
+      thumbs.innerHTML = '';
+      _carouselPhotos.forEach((src, i) => {
+        const img = document.createElement('img');
+        img.src = src; img.className = 'album-thumb-mini' + (i === 0 ? ' active' : '');
+        img.loading = 'lazy';
+        img.decoding = 'async';
+        img.onclick = () => { carouselGoTo(i); _resetCarouselTimer(); };
+        thumbs.appendChild(img);
+      });
+      _carouselRender(false);
+      document.getElementById('albumModal').classList.add('active');
+      document.body.style.overflow = 'hidden';
+      _startCarouselTimer();
+    }
+
+    let _carouselTimer = null;
+
+    function _startCarouselTimer() {
+      _clearCarouselTimer();
+      _carouselTimer = setInterval(() => carouselNav(1), 4000);
+    }
+
+    function _clearCarouselTimer() {
+      if (_carouselTimer) { clearInterval(_carouselTimer); _carouselTimer = null; }
+    }
+
+    function _resetCarouselTimer() {
+      _startCarouselTimer();
+    }
+
+    function _carouselRender(animate) {
+      const img = document.getElementById('albumCarouselImg');
+      const counter = document.getElementById('albumModalCounter');
+      counter.textContent = (_carouselIndex + 1) + ' / ' + _carouselPhotos.length;
+      // Actualizar miniaturas activas
+      document.querySelectorAll('.album-thumb-mini').forEach((el, i) => {
+        el.classList.toggle('active', i === _carouselIndex);
+      });
+      // Scroll miniatura activa a la vista
+      const activeMini = document.querySelectorAll('.album-thumb-mini')[_carouselIndex];
+      if (activeMini) activeMini.scrollIntoView({ inline: 'nearest', behavior: 'smooth' });
+
+      if (animate) {
+        img.classList.add('fade-out');
+        setTimeout(() => {
+          img.src = _carouselPhotos[_carouselIndex];
+          img.classList.remove('fade-out');
+        }, 500);
+      } else {
+        img.src = _carouselPhotos[_carouselIndex];
+      }
+
+      // Precargar siguiente y anterior en segundo plano
+      const nextIdx = (_carouselIndex + 1) % _carouselPhotos.length;
+      const prevIdx = (_carouselIndex - 1 + _carouselPhotos.length) % _carouselPhotos.length;
+      [nextIdx, prevIdx].forEach(idx => {
+        if (_carouselPhotos[idx]) {
+          const pre = new Image();
+          pre.decoding = 'async';
+          pre.src = _carouselPhotos[idx];
+        }
+      });
+    }
+
+    function carouselNav(dir) {
+      _carouselIndex = (_carouselIndex + dir + _carouselPhotos.length) % _carouselPhotos.length;
+      _carouselRender(true);
+      _resetCarouselTimer();
+    }
+
+    function carouselGoTo(i) {
+      _carouselIndex = i;
+      _carouselRender(true);
+      _resetCarouselTimer();
+    }
+
+    function carouselFullscreen() {
+      const src = _carouselPhotos[_carouselIndex];
+      if (!src) return;
+      // Abre la imagen directamente en el zoom sin cambiar el contexto de la galería de fotos
+      _zoomPhotos = _carouselPhotos;
+      _zoomIndex = _carouselIndex;
+      const modal = document.getElementById('zoomModal');
+      document.getElementById('zoomImage').src = src;
+      const counter = document.getElementById('zoomCounter');
+      if (counter) counter.textContent = (_zoomIndex + 1) + ' / ' + _zoomPhotos.length;
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+      _zoomStartTimer();
+    }
+
+    function closeAlbum() {
+      document.getElementById('albumModal').classList.remove('active');
+      document.body.style.overflow = '';
+      _clearCarouselTimer();
+    }
+
+    // Teclado
+    document.addEventListener('keydown', e => {
+      if (!document.getElementById('albumModal').classList.contains('active')) return;
+      if (e.key === 'ArrowRight') carouselNav(1);
+      if (e.key === 'ArrowLeft') carouselNav(-1);
+      if (e.key === 'Escape') closeAlbum();
+    });
+
+    // Swipe touch
+    (function() {
+      let startX = 0;
+      const area = document.getElementById('albumModal');
+      area.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, { passive: true });
+      area.addEventListener('touchend', e => {
+        const dx = e.changedTouches[0].clientX - startX;
+        if (Math.abs(dx) > 50) carouselNav(dx < 0 ? 1 : -1);
+      }, { passive: true });
+    })();
+
+    // VIDEO MODAL — soporta Vimeo y MP4 directo
+    function openVideoModal(src) {
+      const modal = document.getElementById('videoModal');
+      const content = document.getElementById('videoModalContent');
+      content.innerHTML = '';
+      if (isVimeo(src)) {
+        const id = getVimeoId(src);
+        content.innerHTML = '<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/' + id + '?autoplay=1&color=64d2ff&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>';
+      } else {
+        content.innerHTML = '<video controls autoplay playsinline style="width:100%;display:block;background:#000;border-radius:12px;" src="' + src + '"></video>';
+      }
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeVideoModal(e) {
+      if (e && e.target !== document.getElementById('videoModal') && !e.target.classList.contains('video-modal-close')) return;
+      document.getElementById('videoModalContent').innerHTML = '';
+      document.getElementById('videoModal').classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    // FOTO FILTER
+    function filterFotos(cat, btn) {
+      document.querySelectorAll('.foto-tab-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      document.querySelectorAll('.foto-item').forEach(el => {
+        el.classList.toggle('hidden', cat !== 'all' && !el.classList.contains(cat));
+      });
+    }
+
+    // CONTACT FORM
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const btn = document.getElementById('formBtn');
+      btn.disabled = true;
+      btn.textContent = currentLang === 'es' ? 'Enviando...' : 'Sending...';
+      const nombre = document.getElementById('formNombre').value;
+      const email = document.getElementById('formEmail').value;
+      const telefono = document.getElementById('formTelefono').value;
+      const mensaje = document.getElementById('formMensaje').value;
+      const subject = encodeURIComponent('Nueva consulta de ' + nombre);
+      const body = encodeURIComponent('Nombre: ' + nombre + '\nEmail: ' + email + '\nTelefono: ' + telefono + '\n\nMensaje:\n' + mensaje);
+      window.location.href = 'mailto:info@creativeartvideo.com?subject=' + subject + '&body=' + body;
+      setTimeout(() => {
+        this.style.display = 'none';
+        document.getElementById('formSuccess').classList.add('show');
+        btn.disabled = false;
+        btn.textContent = currentLang === 'es' ? 'Enviar Mensaje' : 'Send Message';
+      }, 1000);
+    });
+
+    // SMOOTH SCROLL
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const href = this.getAttribute('href');
+        const entertainmentSection = document.getElementById('entretenimiento');
+
+        if (href === '#entretenimiento') {
+          // Mostrar la seccion de entretenimiento
+          entertainmentSection.style.display = '';
+          setTimeout(() => {
+            entertainmentSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }, 50);
+        } else {
+          // Ocultar entretenimiento al navegar a cualquier otra seccion
+          entertainmentSection.style.display = 'none';
+          const target = document.querySelector(href);
+          if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        // Cerrar menu mobile si esta abierto
+        const mobileNav = document.querySelector('.mobile-nav');
+        if (mobileNav) mobileNav.classList.remove('active');
+      });
+    });
+
+    // INTERSECTION OBSERVER
+    const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) { entry.target.style.opacity = '1'; entry.target.style.transform = 'translateY(0)'; }
+      });
+    }, observerOptions);
+    document.querySelectorAll('.section').forEach(section => {
+      section.style.opacity = '0'; section.style.transform = 'translateY(30px)';
+      section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+      observer.observe(section);
+    });
+
+    // HERO — reveal-on-scroll for the brand mark, card and feature cards
+    // (the background is now one global video element, no per-section canvas needed)
+    (function() {
+      var targets = document.querySelectorAll('#heroBrand, #heroCard, .hero-feature-card');
+      if (!targets.length) return;
+      var obs = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+            obs.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15 });
+      targets.forEach(function(el, i) {
+        el.style.transitionDelay = (i * 0.08) + 's';
+        obs.observe(el);
+      });
+    })();
+
+    // Safety net: some mobile browsers need an explicit play() even with autoplay
+    (function() {
+      var bgVideo = document.getElementById('siteBgVideo');
+      if (!bgVideo) return;
+      var tryPlay = function() { bgVideo.play().catch(function() {}); };
+      tryPlay();
+      document.addEventListener('click', tryPlay, { once: true });
+      document.addEventListener('touchstart', tryPlay, { once: true, passive: true });
+    })();
+
+    // Exponer funciones globales para los onclick del HTML
+    window.changeSlide = changeSlide;
+    window.openAlbumsPage = openAlbumsPage;
+    window.closeAlbumsPage = closeAlbumsPage;
+    window.openVideosPage = openVideosPage;
+    window.closeVideosPage = closeVideosPage;
+    window.openZoom = openZoom;
+    window.closeZoom = closeZoom;
+    window.switchVideoTab = switchVideoTab;
+    window.openAlbum = openAlbum;
+    window.closeAlbum = closeAlbum;
+    window.openVideoModal = openVideoModal;
+    window.closeVideoModal = closeVideoModal;
+    window.filterFotos = filterFotos;
+    window.carouselNav = carouselNav;
+    window.carouselGoTo = carouselGoTo;
+    window.carouselFullscreen = carouselFullscreen;
+
+    }); // fin DOMContentLoaded
+  </script>
+</body>
+
+</html>
