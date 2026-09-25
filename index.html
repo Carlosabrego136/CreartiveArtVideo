@@ -16,7 +16,7 @@
   <link rel="preload"
     href="https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/About/WEBLOGO.png" as="image">
   <link rel="preload" href="assets/hero-principal.jpg" as="image">
-  <link rel="preload" as="video" href="assets/video-principal.mp4" type="video/mp4">
+  <link rel="preload" as="video" href="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260503_101827_abebfeec-f243-466b-b494-7f6814c0fbbf.mp4" type="video/mp4">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -67,7 +67,7 @@
 
     body {
       font-family: var(--font-body);
-      background-color: var(--background);
+      background-color: transparent;
       color: var(--foreground);
       line-height: 1.6;
       overflow-x: hidden;
@@ -361,13 +361,11 @@
 
 
     /* ============================================
-       HERO VIDEO BACKGROUND — contained to the hero section only.
-       It does NOT follow the page while scrolling; below the hero,
-       the page returns to the solid background so the photo
-       sections stand out clearly.
+       GLOBAL FIXED VIDEO BACKGROUND — same video behind the whole site;
+       only content (photos, text, cards) scrolls on top of it.
        ============================================ */
-    .hero-bg-video {
-      position: absolute;
+    .site-bg-video {
+      position: fixed;
       inset: 0;
       width: 100%;
       height: 100%;
@@ -376,11 +374,11 @@
       background: #000;
     }
 
-    .hero-bg-overlay {
-      position: absolute;
+    .site-bg-overlay {
+      position: fixed;
       inset: 0;
       z-index: -1;
-      background: linear-gradient(180deg, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0.32) 40%, rgba(0, 0, 0, 0.5) 75%, rgba(0, 0, 0, 0.85) 100%);
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.62) 0%, rgba(0, 0, 0, 0.4) 35%, rgba(0, 0, 0, 0.55) 70%, rgba(0, 0, 0, 0.88) 100%);
       pointer-events: none;
     }
 
@@ -756,7 +754,7 @@
     .slideshow-section {
       position: relative;
       padding: 6rem 0;
-      background: var(--background);
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.25) 100%);
       overflow: hidden;
     }
 
@@ -2044,7 +2042,7 @@
 
 
     .entertainment-section {
-      background: var(--background-light);
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.25) 100%);
     }
 
     .entertainment-grid {
@@ -2253,7 +2251,7 @@
 
     .footer {
       padding: 4rem 2rem;
-      background: linear-gradient(180deg, var(--background) 0%, var(--background-light) 100%);
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.75) 100%);
       text-align: center;
     }
 
@@ -2722,6 +2720,13 @@
 </head>
 
 <body>
+  <!-- GLOBAL FIXED BACKGROUND VIDEO — stays the same behind the whole site while you scroll -->
+  <video class="site-bg-video" id="siteBgVideo" autoplay loop muted playsinline preload="auto"
+    poster="assets/hero-principal.jpg">
+    <source src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260503_101827_abebfeec-f243-466b-b494-7f6814c0fbbf.mp4" type="video/mp4">
+  </video>
+  <div class="site-bg-overlay"></div>
+
   <!-- LOADING SCREEN -->
   <div class="loading-screen" id="loadingScreen">
     <img src="https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/About/2logo%20CAV2024.png" alt="Creative Art Video" class="loading-logo" fetchpriority="high">
@@ -2771,13 +2776,6 @@
 
   <!-- HERO -->
   <section class="hero" id="inicio">
-    <!-- Video background contained to the hero only (not fixed to the whole page) -->
-    <video class="hero-bg-video" id="heroBgVideo" autoplay loop muted playsinline preload="auto"
-      poster="assets/hero-principal.jpg">
-      <source src="assets/video-principal.mp4" type="video/mp4">
-    </video>
-    <div class="hero-bg-overlay"></div>
-
     <div class="hero-brand" id="heroBrand">
       <img loading="lazy" decoding="async" src="https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/About/WEBLOGO.png" alt="Creative Art Video">
       <span>Creative Art Video</span>
@@ -4032,6 +4030,7 @@
     });
 
     // HERO — reveal-on-scroll for the brand mark, card and feature cards
+    // (the background is now one global video element, no per-section canvas needed)
     (function() {
       var targets = document.querySelectorAll('#heroBrand, #heroCard, .hero-feature-card');
       if (!targets.length) return;
@@ -4051,7 +4050,7 @@
 
     // Safety net: some mobile browsers need an explicit play() even with autoplay
     (function() {
-      var bgVideo = document.getElementById('heroBgVideo');
+      var bgVideo = document.getElementById('siteBgVideo');
       if (!bgVideo) return;
       var tryPlay = function() { bgVideo.play().catch(function() {}); };
       tryPlay();
