@@ -2168,9 +2168,29 @@
 
 
     .footer {
+      position: relative;
+      z-index: 0;
+      overflow: hidden;
       padding: 4rem 2rem;
-      background: linear-gradient(180deg, var(--background) 0%, var(--background-light) 100%);
+      background: var(--background);
       text-align: center;
+    }
+
+    .footer-bg-video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -2;
+    }
+
+    .footer-bg-overlay {
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background: linear-gradient(180deg, rgba(5, 4, 3, 0.82) 0%, rgba(5, 4, 3, 0.72) 35%, rgba(5, 4, 3, 0.9) 100%);
+      pointer-events: none;
     }
 
     .footer-logo {
@@ -3471,6 +3491,10 @@
 
   <!-- FOOTER -->
   <footer class="footer">
+    <video class="footer-bg-video" autoplay loop muted playsinline preload="auto">
+      <source src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260701_083907_581a119a-89b7-4c9f-a6ef-560625e0086f.mp4" type="video/mp4">
+    </video>
+    <div class="footer-bg-overlay"></div>
     <img loading="lazy" decoding="async" src="https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/About/WEBLOGO.png" alt="Creative Art Video" class="footer-logo">
     <div class="footer-links">
       <a href="#inicio" data-es="Inicio" data-en="Home">Inicio</a>
