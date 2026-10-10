@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es" id="htmlRoot">
+<html lang="en" id="htmlRoot">
 
 <head>
   <meta charset="UTF-8">
@@ -448,12 +448,10 @@
     }
 
     .hero-brand {
-      position: absolute;
-      top: clamp(84px, 8vw, 116px);
-      left: clamp(20px, 3vw, 48px);
       display: flex;
       align-items: center;
       gap: 0.6rem;
+      margin-bottom: 2.25rem;
     }
 
     .hero-brand img {
@@ -593,10 +591,6 @@
     @media (max-width: 768px) {
       .hero {
         padding-top: 6.5rem;
-      }
-
-      .hero-brand {
-        top: 68px;
       }
 
       .hero-bg-gradient {
@@ -2651,8 +2645,8 @@
 
   <!-- LANG SWITCH -->
   <div class="lang-switch">
-    <button class="lang-btn active" id="langEs" onclick="setLanguage('es')">ES</button>
-    <button class="lang-btn" id="langEn" onclick="setLanguage('en')">EN</button>
+    <button class="lang-btn" id="langEs" onclick="setLanguage('es')">ES</button>
+    <button class="lang-btn active" id="langEn" onclick="setLanguage('en')">EN</button>
   </div>
 
   <!-- HEADER -->
@@ -3503,7 +3497,6 @@
         </svg>
       </a>
     </div>
-    <p class="footer-address">11490 Burbank Blvd #3A, North Hollywood, CA 91601</p>
     <p class="footer-copy">&copy; 2024 Creative Art Video.
       <span data-es="Todos los derechos reservados." data-en="All rights reserved.">Todos los derechos reservados.</span>
     </p>
@@ -3517,7 +3510,7 @@
   <!-- JAVASCRIPT -->
   <script>
     // LANGUAGE — global para que los onclick del HTML funcionen
-    let currentLang = 'es';
+    let currentLang = 'en';
     function setLanguage(lang) {
       currentLang = lang;
       document.getElementById('langEs').classList.toggle('active', lang === 'es');
@@ -3529,7 +3522,7 @@
       if (typeof updateCaptionBox === 'function') updateCaptionBox(currentSlide || 0);
     }
     const savedLang = localStorage.getItem('preferredLang');
-    if (savedLang) setLanguage(savedLang);
+    setLanguage(savedLang || 'en');
 
     // Todo lo demás dentro de DOMContentLoaded para garantizar que el DOM esté listo en móvil
     document.addEventListener('DOMContentLoaded', function() {
