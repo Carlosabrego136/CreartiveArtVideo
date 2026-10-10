@@ -657,150 +657,6 @@
     }
 
 
-    .about-section {
-      padding-top: 6rem;
-      padding-bottom: 5rem;
-    }
-
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1.1fr 1fr;
-      gap: 2.5rem 4.5rem;
-      align-items: center;
-      margin-bottom: 5rem;
-    }
-
-    .about-col-photo {
-      border-radius: 16px;
-      overflow: hidden;
-      aspect-ratio: 3/4;
-    }
-
-    .about-col-photo img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-
-    .about-text-stack {
-      display: flex;
-      flex-direction: column;
-      gap: 2.5rem;
-    }
-
-    .about-label {
-      font-family: var(--font-mono);
-      font-size: 0.75rem;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      color: var(--accent-gold);
-      margin-bottom: 0.9rem;
-    }
-
-    .about-title {
-      font-family: var(--font-heading);
-      font-size: clamp(1.9rem, 3vw, 2.6rem);
-      font-weight: 400;
-      line-height: 1.15;
-      margin-bottom: 1.1rem;
-      color: var(--foreground);
-    }
-
-    .about-title em {
-      font-style: italic;
-      color: var(--accent-gold);
-    }
-
-    .about-text {
-      color: var(--muted);
-      line-height: 1.85;
-      font-size: 0.95rem;
-    }
-
-    .about-features {
-      display: grid;
-      grid-template-columns: 1.15fr 1fr;
-      gap: 3rem;
-      align-items: center;
-      padding-top: 3rem;
-      border-top: 1px solid var(--border);
-    }
-
-    .about-features-list {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 2rem 1.5rem;
-    }
-
-    .about-feature-item {
-      display: flex;
-      gap: 1rem;
-      align-items: flex-start;
-    }
-
-    .about-feature-icon {
-      width: 46px;
-      height: 46px;
-      border-radius: 50%;
-      border: 1px solid var(--border);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--accent-gold);
-      flex-shrink: 0;
-    }
-
-    .about-feature-icon svg {
-      width: 20px;
-      height: 20px;
-    }
-
-    .about-feature-item h3 {
-      font-size: 0.85rem;
-      font-weight: 700;
-      letter-spacing: 0.5px;
-      margin-bottom: 0.3rem;
-      color: var(--foreground);
-    }
-
-    .about-feature-item p {
-      font-size: 0.8rem;
-      color: var(--muted);
-      line-height: 1.5;
-    }
-
-    .about-features-photo {
-      border-radius: 16px;
-      overflow: hidden;
-      aspect-ratio: 16/11;
-    }
-
-    .about-features-photo img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-
-    @media (max-width: 900px) {
-      .about-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .about-col-photo {
-        grid-row: auto;
-        aspect-ratio: 4/3;
-      }
-
-      .about-features {
-        grid-template-columns: 1fr;
-      }
-
-      .about-features-list {
-        grid-template-columns: 1fr;
-      }
-    }
 
 
     .slideshow-section {
@@ -2582,7 +2438,6 @@
         transform-origin: top right;
       }
 
-      .about-grid,
       .contact-grid {
         grid-template-columns: 1fr;
       }
@@ -2809,7 +2664,6 @@
       <nav class="header-nav">
         <ul class="nav-links">
           <li><a href="#inicio" data-es="Inicio" data-en="Home">Inicio</a></li>
-          <li><a href="#nosotros" data-es="Nosotros" data-en="About">Nosotros</a></li>
           <li><a href="#galeria" data-es="Galería" data-en="Gallery">Galería</a></li>
           <li><a href="#videos-section" data-es="Videos" data-en="Videos">Videos</a></li>
           <li><a href="https://cavent.creativeartvideo.com/ent" target="_blank" data-es="Entretenimiento"
@@ -2825,7 +2679,6 @@
   <div class="mobile-nav" id="mobileNav">
     <button class="close-mobile-menu" id="closeMobileMenu">&times;</button>
     <a href="#inicio" data-es="Inicio" data-en="Home">Inicio</a>
-    <a href="#nosotros" data-es="Nosotros" data-en="About">Nosotros</a>
     <a href="#galeria" data-es="Galería" data-en="Gallery">Galería</a>
     <a href="#videos-section" data-es="Videos" data-en="Videos">Videos</a>
     <a href="https://cavent.creativeartvideo.com/ent" target="_blank" data-es="Entretenimiento"
@@ -2998,70 +2851,6 @@
     </div>
   </section>
 
-  <!-- ABOUT -->
-  <section class="section about-section" id="nosotros">
-    <div class="about-grid">
-      <div class="about-col about-col-photo">
-        <img src="assets/about-foto1.jpg" alt="Creative Art Video" loading="lazy" decoding="async">
-      </div>
-      <div class="about-col about-text-stack">
-        <div class="about-block">
-          <p class="about-label" data-es="Sobre Nosotros" data-en="About Us">Sobre Nosotros</p>
-          <h2 class="about-title"><span data-es="Arte y Pasión en" data-en="Art and Passion in">Arte y Pasión en</span> <em data-es="Cada Toma" data-en="Every Shot">Cada Toma</em></h2>
-          <p class="about-text" data-es="En Creative Art Video creemos que cada historia merece ser contada de una manera extraordinaria. Convertimos momentos reales en películas atemporales que te harán revivir tus emociones una y otra vez."
-            data-en="At Creative Art Video we believe every story deserves to be told in an extraordinary way. We turn real moments into timeless films that will make you relive your emotions again and again.">
-            En Creative Art Video creemos que cada historia merece ser contada de una manera extraordinaria. Convertimos
-            momentos reales en películas atemporales que te harán revivir tus emociones una y otra vez.</p>
-        </div>
-        <div class="about-block">
-          <p class="about-label" data-es="Nuestra Historia" data-en="Our Story">Nuestra Historia</p>
-          <h2 class="about-title"><span data-es="Momentos que" data-en="Moments that">Momentos que</span> <em data-es="Perduran" data-en="Last Forever">Perduran</em></h2>
-          <p class="about-text" data-es="Nacimos de una profunda pasión por el cine, la fotografía y las emociones auténticas. Con años de experiencia en eventos especiales, hemos tenido el honor de contar cientos de historias únicas, siempre con el mismo propósito: capturar la esencia de tu momento y convertirlo en un legado para toda la vida."
-            data-en="We were born from a deep passion for film, photography and authentic emotions. With years of experience in special events, we've had the honor of telling hundreds of unique stories, always with the same purpose: capturing the essence of your moment and turning it into a legacy for a lifetime.">
-            Nacimos de una profunda pasión por el cine, la fotografía y las emociones auténticas. Con años de experiencia
-            en eventos especiales, hemos tenido el honor de contar cientos de historias únicas, siempre con el mismo
-            propósito: capturar la esencia de tu momento y convertirlo en un legado para toda la vida.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="about-features">
-      <div class="about-features-list">
-        <div class="about-feature-item">
-          <div class="about-feature-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
-          <div>
-            <h3 data-es="Pasión por el Detalle" data-en="Passion for Detail">Pasión por el Detalle</h3>
-            <p data-es="Cada toma cuenta, cada detalle importa." data-en="Every shot counts, every detail matters.">Cada toma cuenta, cada detalle importa.</p>
-          </div>
-        </div>
-        <div class="about-feature-item">
-          <div class="about-feature-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" d="M12 2l2.5 6H21l-5.2 4 2 6.5L12 15l-5.8 3.5 2-6.5L3 8h6.5L12 2z"/></svg></div>
-          <div>
-            <h3 data-es="Calidad Cinematográfica" data-en="Cinematic Quality">Calidad Cinematográfica</h3>
-            <p data-es="Equipos de última generación y un enfoque artístico." data-en="Latest-generation equipment with an artistic approach.">Equipos de última generación y un enfoque artístico.</p>
-          </div>
-        </div>
-        <div class="about-feature-item">
-          <div class="about-feature-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" d="M12 21s-7.5-4.6-10-9.1C.5 8.6 2.4 5 6 5c2 0 3.5 1 4 2.3C10.5 6 12 5 14 5c3.6 0 5.5 3.6 4 6.9C19.5 16.4 12 21 12 21z"/></svg></div>
-          <div>
-            <h3 data-es="Historias Reales" data-en="Real Stories">Historias Reales</h3>
-            <p data-es="Momentos auténticos que emocionan." data-en="Authentic moments that move you.">Momentos auténticos que emocionan.</p>
-          </div>
-        </div>
-        <div class="about-feature-item">
-          <div class="about-feature-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><circle cx="9" cy="8" r="3.2" stroke-width="1.6"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" d="M2.5 20c0-3.3 2.9-6 6.5-6s6.5 2.7 6.5 6M16 8.5a3 3 0 110 5M21.5 20c0-2.8-2-5.1-4.7-5.8"/></svg></div>
-          <div>
-            <h3 data-es="Experiencia y Confianza" data-en="Experience and Trust">Experiencia y Confianza</h3>
-            <p data-es="Cientos de eventos y familias que nos recomiendan." data-en="Hundreds of events and families who recommend us.">Cientos de eventos y familias que nos recomiendan.</p>
-          </div>
-        </div>
-      </div>
-      <div class="about-features-photo">
-        <img src="assets/about-foto2.jpg" alt="Creative Art Video" loading="lazy" decoding="async">
-      </div>
-    </div>
-  </section>
-
   <!-- SLIDESHOW -->
   <section class="slideshow-section" id="galeria">
     <div class="section-header">
@@ -3179,7 +2968,6 @@
       <img loading="lazy" decoding="async" src="https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/About/WEBLOGO.png" alt="Logo" class="albums-nav-logo">
       <ul class="albums-nav-links">
         <li><a href="#inicio" onclick="closeAlbumsPage()" data-es="Inicio" data-en="Home">Inicio</a></li>
-        <li><a href="#nosotros" onclick="closeAlbumsPage()" data-es="Nosotros" data-en="About">Nosotros</a></li>
         <li><a href="#galeria" onclick="closeAlbumsPage()" data-es="Galería" data-en="Gallery">Galería</a></li>
         <li><a href="#videos-section" onclick="closeAlbumsPage()" data-es="Videos" data-en="Videos">Videos</a></li>
         <li><a href="https://cavent.creativeartvideo.com/ent" target="_blank" data-es="Entretenimiento"
@@ -3261,9 +3049,6 @@
           <li><a href="#inicio" onclick="closeAlbum()"
               style="color:rgba(240,246,252,0.85);text-decoration:none;font-size:0.68rem;font-weight:500;letter-spacing:1.4px;text-transform:uppercase;padding:0.4rem 0.75rem;display:block;transition:color 0.3s;"
               data-es="Inicio" data-en="Home">Inicio</a></li>
-          <li><a href="#nosotros" onclick="closeAlbum()"
-              style="color:rgba(240,246,252,0.85);text-decoration:none;font-size:0.68rem;font-weight:500;letter-spacing:1.4px;text-transform:uppercase;padding:0.4rem 0.75rem;display:block;transition:color 0.3s;"
-              data-es="Nosotros" data-en="About">Nosotros</a></li>
           <li><a href="#galeria" onclick="closeAlbum()"
               style="color:rgba(240,246,252,0.85);text-decoration:none;font-size:0.68rem;font-weight:500;letter-spacing:1.4px;text-transform:uppercase;padding:0.4rem 0.75rem;display:block;transition:color 0.3s;"
               data-es="Galería" data-en="Gallery">Galería</a></li>
@@ -3338,7 +3123,6 @@
         <img loading="lazy" decoding="async" src="https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/About/WEBLOGO.png" alt="Logo" class="albums-nav-logo">
         <ul class="albums-nav-links">
           <li><a href="#inicio" onclick="closeVideosPage()" data-es="Inicio" data-en="Home">Inicio</a></li>
-          <li><a href="#nosotros" onclick="closeVideosPage()" data-es="Nosotros" data-en="About">Nosotros</a></li>
           <li><a href="#galeria" onclick="closeVideosPage()" data-es="Galería" data-en="Gallery">Galería</a></li>
           <li><a href="#videos-section" onclick="closeVideosPage()" data-es="Videos" data-en="Videos">Videos</a></li>
           <li><a href="https://cavent.creativeartvideo.com/ent" target="_blank" data-es="Entretenimiento"
@@ -3694,7 +3478,6 @@
     <img loading="lazy" decoding="async" src="https://raw.githubusercontent.com/Carlosabrego136/Creative/main/WEBSITE2026/About/WEBLOGO.png" alt="Creative Art Video" class="footer-logo">
     <div class="footer-links">
       <a href="#inicio" data-es="Inicio" data-en="Home">Inicio</a>
-      <a href="#nosotros" data-es="Nosotros" data-en="About">Nosotros</a>
       <a href="#galeria" data-es="Galería" data-en="Gallery">Galería</a>
       <a href="#videos-section" data-es="Videos" data-en="Videos">Videos</a>
       <a href="#contacto" data-es="Contacto" data-en="Contact">Contacto</a>
