@@ -454,14 +454,6 @@
       display: flex;
       align-items: center;
       gap: 0.6rem;
-      opacity: 0;
-      transform: translateY(16px);
-      transition: opacity 0.8s ease, transform 0.8s ease;
-    }
-
-    .hero-brand.in-view {
-      opacity: 1;
-      transform: translateY(0);
     }
 
     .hero-brand img {
@@ -478,14 +470,6 @@
 
     .hero-card {
       max-width: 620px;
-      opacity: 0;
-      transform: translateY(24px);
-      transition: opacity 0.9s ease, transform 0.9s ease;
-    }
-
-    .hero-card.in-view {
-      opacity: 1;
-      transform: translateY(0);
     }
 
     .hero-subtitle {
@@ -559,14 +543,6 @@
       display: grid;
       grid-template-columns: repeat(5, 1fr);
       gap: 1.25rem;
-      opacity: 0;
-      transform: translateY(30px);
-      transition: opacity 0.8s ease, transform 0.8s ease;
-    }
-
-    .hero-features.in-view {
-      opacity: 1;
-      transform: translateY(0);
     }
 
     .hero-feature-card {
@@ -689,14 +665,12 @@
     .about-grid {
       display: grid;
       grid-template-columns: 1.1fr 1fr;
-      grid-template-rows: auto auto;
       gap: 2.5rem 4.5rem;
-      align-items: start;
+      align-items: center;
       margin-bottom: 5rem;
     }
 
     .about-col-photo {
-      grid-row: 1 / 3;
       border-radius: 16px;
       overflow: hidden;
       aspect-ratio: 3/4;
@@ -707,6 +681,12 @@
       height: 100%;
       object-fit: cover;
       display: block;
+    }
+
+    .about-text-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
     }
 
     .about-label {
@@ -956,11 +936,11 @@
     }
 
     .slide-arrow-prev {
-      left: -25px;
+      left: 1.25rem;
     }
 
     .slide-arrow-next {
-      right: -25px;
+      right: 1.25rem;
     }
 
     .slide-dots {
@@ -1027,7 +1007,7 @@
       display: none;
       position: fixed;
       inset: 0;
-      background: var(--background) url('assets/fondovideos.jpg') center center / cover no-repeat fixed;
+      background: var(--background);
       z-index: 2000;
       overflow-y: auto;
     }
@@ -1036,7 +1016,7 @@
       content: '';
       position: fixed;
       inset: 0;
-      background: rgba(0, 0, 0, 0.80);
+      background: radial-gradient(circle at 50% 0%, rgba(201, 163, 87, 0.08) 0%, rgba(0,0,0,0) 60%);
       z-index: 0;
       pointer-events: none;
     }
@@ -1717,7 +1697,7 @@
       display: none;
       position: fixed;
       inset: 0;
-      background: var(--background) url('assets/fondovideos.jpg') center center / cover no-repeat fixed;
+      background: var(--background);
       z-index: 2000;
       overflow-y: auto;
     }
@@ -1726,7 +1706,7 @@
       content: '';
       position: fixed;
       inset: 0;
-      background: rgba(0, 0, 0, 0.82);
+      background: radial-gradient(circle at 50% 0%, rgba(201, 163, 87, 0.08) 0%, rgba(0,0,0,0) 60%);
       z-index: 0;
       pointer-events: none;
     }
@@ -3024,22 +3004,24 @@
       <div class="about-col about-col-photo">
         <img src="assets/about-foto1.jpg" alt="Creative Art Video" loading="lazy" decoding="async">
       </div>
-      <div class="about-col about-col-text">
-        <p class="about-label" data-es="Sobre Nosotros" data-en="About Us">Sobre Nosotros</p>
-        <h2 class="about-title"><span data-es="Arte y Pasión en" data-en="Art and Passion in">Arte y Pasión en</span> <em data-es="Cada Toma" data-en="Every Shot">Cada Toma</em></h2>
-        <p class="about-text" data-es="En Creative Art Video creemos que cada historia merece ser contada de una manera extraordinaria. Convertimos momentos reales en películas atemporales que te harán revivir tus emociones una y otra vez."
-          data-en="At Creative Art Video we believe every story deserves to be told in an extraordinary way. We turn real moments into timeless films that will make you relive your emotions again and again.">
-          En Creative Art Video creemos que cada historia merece ser contada de una manera extraordinaria. Convertimos
-          momentos reales en películas atemporales que te harán revivir tus emociones una y otra vez.</p>
-      </div>
-      <div class="about-col about-col-text">
-        <p class="about-label" data-es="Nuestra Historia" data-en="Our Story">Nuestra Historia</p>
-        <h2 class="about-title"><span data-es="Momentos que" data-en="Moments that">Momentos que</span> <em data-es="Perduran" data-en="Last Forever">Perduran</em></h2>
-        <p class="about-text" data-es="Nacimos de una profunda pasión por el cine, la fotografía y las emociones auténticas. Con años de experiencia en eventos especiales, hemos tenido el honor de contar cientos de historias únicas, siempre con el mismo propósito: capturar la esencia de tu momento y convertirlo en un legado para toda la vida."
-          data-en="We were born from a deep passion for film, photography and authentic emotions. With years of experience in special events, we've had the honor of telling hundreds of unique stories, always with the same purpose: capturing the essence of your moment and turning it into a legacy for a lifetime.">
-          Nacimos de una profunda pasión por el cine, la fotografía y las emociones auténticas. Con años de experiencia
-          en eventos especiales, hemos tenido el honor de contar cientos de historias únicas, siempre con el mismo
-          propósito: capturar la esencia de tu momento y convertirlo en un legado para toda la vida.</p>
+      <div class="about-col about-text-stack">
+        <div class="about-block">
+          <p class="about-label" data-es="Sobre Nosotros" data-en="About Us">Sobre Nosotros</p>
+          <h2 class="about-title"><span data-es="Arte y Pasión en" data-en="Art and Passion in">Arte y Pasión en</span> <em data-es="Cada Toma" data-en="Every Shot">Cada Toma</em></h2>
+          <p class="about-text" data-es="En Creative Art Video creemos que cada historia merece ser contada de una manera extraordinaria. Convertimos momentos reales en películas atemporales que te harán revivir tus emociones una y otra vez."
+            data-en="At Creative Art Video we believe every story deserves to be told in an extraordinary way. We turn real moments into timeless films that will make you relive your emotions again and again.">
+            En Creative Art Video creemos que cada historia merece ser contada de una manera extraordinaria. Convertimos
+            momentos reales en películas atemporales que te harán revivir tus emociones una y otra vez.</p>
+        </div>
+        <div class="about-block">
+          <p class="about-label" data-es="Nuestra Historia" data-en="Our Story">Nuestra Historia</p>
+          <h2 class="about-title"><span data-es="Momentos que" data-en="Moments that">Momentos que</span> <em data-es="Perduran" data-en="Last Forever">Perduran</em></h2>
+          <p class="about-text" data-es="Nacimos de una profunda pasión por el cine, la fotografía y las emociones auténticas. Con años de experiencia en eventos especiales, hemos tenido el honor de contar cientos de historias únicas, siempre con el mismo propósito: capturar la esencia de tu momento y convertirlo en un legado para toda la vida."
+            data-en="We were born from a deep passion for film, photography and authentic emotions. With years of experience in special events, we've had the honor of telling hundreds of unique stories, always with the same purpose: capturing the essence of your moment and turning it into a legacy for a lifetime.">
+            Nacimos de una profunda pasión por el cine, la fotografía y las emociones auténticas. Con años de experiencia
+            en eventos especiales, hemos tenido el honor de contar cientos de historias únicas, siempre con el mismo
+            propósito: capturar la esencia de tu momento y convertirlo en un legado para toda la vida.</p>
+        </div>
       </div>
     </div>
 
@@ -4151,37 +4133,7 @@
       });
     });
 
-    // INTERSECTION OBSERVER
-    const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) { entry.target.style.opacity = '1'; entry.target.style.transform = 'translateY(0)'; }
-      });
-    }, observerOptions);
-    document.querySelectorAll('.section').forEach(section => {
-      section.style.opacity = '0'; section.style.transform = 'translateY(30px)';
-      section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-      observer.observe(section);
-    });
-
-    // HERO — reveal-on-scroll for the brand mark, card and feature cards
-    // (the background is now one global video element, no per-section canvas needed)
-    (function() {
-      var targets = document.querySelectorAll('#heroBrand, #heroCard, #heroFeatures');
-      if (!targets.length) return;
-      var obs = new IntersectionObserver(function(entries) {
-        entries.forEach(function(entry) {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('in-view');
-            obs.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.15 });
-      targets.forEach(function(el, i) {
-        el.style.transitionDelay = (i * 0.08) + 's';
-        obs.observe(el);
-      });
-    })();
+    // (Scroll fade-in effect removed per client feedback — content is shown immediately, no opacity transitions)
 
     // Exponer funciones globales para los onclick del HTML
     window.changeSlide = changeSlide;
